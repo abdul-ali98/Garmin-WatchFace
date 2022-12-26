@@ -1,0 +1,9 @@
+<layout id="WatchFace">
+    <drawable class="Background" />
+    <label id="batteryLabel" x="center" y="17" font="Graphics.FONT_TINY" text="50" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <bitmap id="battery" x="103" y="8" filename="../drawables/battery.png" />
+    <label id="TimeLabel" x="center" y="center" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />
+
+    <label id="heartLabel" x="center" y="212" font="Graphics.FONT_TINY" text="" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <bitmap id="heart" x="85" y="195" filename="../drawables/heart.png" />
+</layout>

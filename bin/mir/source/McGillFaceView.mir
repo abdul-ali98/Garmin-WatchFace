@@ -1,0 +1,745 @@
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 2; ]
+import Toybox.Graphics;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 4; ]
+import Toybox.System;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 5; ]
+import Toybox.WatchUi;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 6; ]
+using Toybox.ActivityMonitor;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 7; ]
+using Toybox.Sensor;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 8; ]
+using Toybox.Time.Gregorian as :Date;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 10; ]
+class McGillFaceView extends WatchUi.WatchFace{
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 10; ]
+    <init> {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 11; @position = 14; ]
+    private
+    var myImage;
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 12; @position = 14; ]
+    private
+    var lastHR;
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 14; ]
+    function initialize() as Void {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_14_24_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 15 4 ]
+        %tmp.2 = getv ? :WatchFace;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 17 4 ]
+        %tmp.4 = getm $.Toybox.Application;
+        %tmp.5 = getv function %tmp.4 :loadResource;
+        %tmp.7 = getv ? :Rez;
+        %tmp.8 = getv %tmp.7 :Drawables;
+        %tmp.9 = getv %tmp.8 :MyImage;
+        %tmp.10 = invoke %tmp.4 %tmp.5(%tmp.9);
+        putv self :myImage %tmp.10;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 18 4 ]
+        %tmp.11 = "";
+        putv self :lastHR %tmp.11;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_14_24_stop:
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 22; ]
+    function onLayout(dc as Dc) as Void {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_22_38_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 23 4 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :WatchFace;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_22_38_stop:
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 29; ]
+    function onShow() as Void {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 32; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 34 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %timeFormat.1 = local;
+        %tmp.1 = "$1$:$2$";
+        lputv %timeFormat.1 %tmp.1;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 35 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %clockTime.2 = local;
+        %tmp.2 = getm $.Toybox.System;
+        %tmp.3 = getv function %tmp.2 :getClockTime;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %clockTime.2 %tmp.4;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 36 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %hours.3 = local;
+        %tmp.5 = lgetv %clockTime.2;
+        %tmp.6 = getv %tmp.5 :hour;
+        lputv %hours.3 %tmp.6;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 37 4 ]
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_37_4_if_stmt:
+        %tmp.7 = getm $.Toybox.System;
+        %tmp.8 = getv function %tmp.7 :getDeviceSettings;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = getv %tmp.9 :is24Hour;
+        %tmp.11 = not %tmp.10;
+        bf %tmp.11 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_37_4_if_false;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_37_4_if_true:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_37_46_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 38 6 ]
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_38_6_if_stmt:
+        %tmp.13 = lgetv %hours.3;
+        %tmp.14 = 12;
+        %tmp.15 = gt %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_38_6_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_38_6_if_true:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_38_22_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 39 8 ]
+        %tmp.17 = lgetv %hours.3;
+        %tmp.18 = 12;
+        %tmp.19 = sub %tmp.17 %tmp.18;
+        lputv %hours.3 %tmp.19;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_38_22_stop:
+        goto @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_38_6_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_38_6_if_end:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_37_46_stop:
+        goto @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_37_4_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_37_4_if_false:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_41_11_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 42 6 ]
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_42_6_if_stmt:
+        %tmp.20 = self;
+        %tmp.21 = getv function %tmp.20 :getApp;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = getv function %tmp.22 :getProperty;
+        %tmp.24 = "UseMilitaryFormat";
+        %tmp.25 = invoke %tmp.22 %tmp.23(%tmp.24);
+        bf %tmp.25 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_42_6_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_42_6_if_true:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_42_53_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 43 8 ]
+        %tmp.26 = "$1$$2$";
+        lputv %timeFormat.1 %tmp.26;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 44 8 ]
+        %tmp.27 = lgetv %hours.3;
+        %tmp.28 = getv function %tmp.27 :format;
+        %tmp.29 = "%02d";
+        %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+        lputv %hours.3 %tmp.30;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_42_53_stop:
+        goto @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_42_6_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_42_6_if_end:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_41_11_stop:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_37_4_if_end:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 47 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %hoursString.4 = local;
+        %tmp.32 = lgetv %hours.3;
+        lputv %hoursString.4 %tmp.32;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 49 4 ]
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_49_4_if_stmt:
+        %tmp.34 = lgetv %hours.3;
+        %tmp.35 = 10;
+        %tmp.36 = lt %tmp.34 %tmp.35;
+        bf %tmp.36 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_49_4_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_49_4_if_true:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_49_20_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 50 6 ]
+        %tmp.37 = "0";
+        %tmp.39 = lgetv %hours.3;
+        %tmp.40 = add %tmp.37 %tmp.39;
+        lputv %hoursString.4 %tmp.40;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_49_20_stop:
+        goto @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_49_4_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_49_4_if_end:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 52 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %minutes.5 = local;
+        %tmp.41 = lgetv %clockTime.2;
+        %tmp.42 = getv %tmp.41 :min;
+        %tmp.43 = getv function %tmp.42 :format;
+        %tmp.44 = "%02d";
+        %tmp.45 = invoke %tmp.42 %tmp.43(%tmp.44);
+        %tmp.46 = getv function %tmp.45 :toLong;
+        %tmp.47 = invoke %tmp.45 %tmp.46();
+        lputv %minutes.5 %tmp.47;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 53 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %minutesString.6 = local;
+        %tmp.49 = lgetv %minutes.5;
+        lputv %minutesString.6 %tmp.49;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 54 4 ]
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_54_4_if_stmt:
+        %tmp.51 = lgetv %minutes.5;
+        %tmp.52 = 10;
+        %tmp.53 = lt %tmp.51 %tmp.52;
+        bf %tmp.53 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_54_4_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_54_4_if_true:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_54_22_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 55 6 ]
+        %tmp.54 = "0";
+        %tmp.56 = lgetv %minutes.5;
+        %tmp.57 = add %tmp.54 %tmp.56;
+        lputv %minutesString.6 %tmp.57;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_54_22_stop:
+        goto @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_54_4_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_54_4_if_end:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 57 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %timeString.7 = local;
+        %tmp.59 = lgetv %hoursString.4;
+        %tmp.60 = ":";
+        %tmp.61 = add %tmp.59 %tmp.60;
+        %tmp.63 = lgetv %minutesString.6;
+        %tmp.64 = add %tmp.61 %tmp.63;
+        lputv %timeString.7 %tmp.64;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 60 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %view.8 = local;
+        %tmp.66 = getv ? :View;
+        %tmp.67 = getv function %tmp.66 :findDrawableById;
+        %tmp.68 = "TimeLabel";
+        %tmp.69 = invoke %tmp.66 %tmp.67(%tmp.68);
+        %tmp.70 = as %tmp.69 Text;
+        lputv %view.8 %tmp.70;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 61 4 ]
+        %tmp.71 = lgetv %view.8;
+        %tmp.72 = getv function %tmp.71 :setColor;
+        %tmp.73 = self;
+        %tmp.74 = getv function %tmp.73 :getApp;
+        %tmp.75 = invoke %tmp.73 %tmp.74();
+        %tmp.76 = getv function %tmp.75 :getProperty;
+        %tmp.77 = "ForegroundColor";
+        %tmp.78 = invoke %tmp.75 %tmp.76(%tmp.77);
+        %tmp.79 = as %tmp.78 Number;
+        invoke %tmp.71 %tmp.72(%tmp.79);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 62 4 ]
+        %tmp.80 = lgetv %view.8;
+        %tmp.81 = getv function %tmp.80 :setText;
+        %tmp.83 = lgetv %timeString.7;
+        invoke %tmp.80 %tmp.81(%tmp.83);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 63 4 ]
+        %tmp.84 = lgetv %view.8;
+        %tmp.85 = getv function %tmp.84 :setLocation;
+        %tmp.86 = lgetv %dc;
+        %tmp.87 = getv function %tmp.86 :getWidth;
+        %tmp.88 = invoke %tmp.86 %tmp.87();
+        %tmp.89 = 2;
+        %tmp.90 = div %tmp.88 %tmp.89;
+        %tmp.91 = lgetv %dc;
+        %tmp.92 = getv function %tmp.91 :getHeight;
+        %tmp.93 = invoke %tmp.91 %tmp.92();
+        %tmp.94 = 4;
+        %tmp.95 = div %tmp.93 %tmp.94;
+        %tmp.97 = getv ? :myImage;
+        %tmp.98 = getv function %tmp.97 :getHeight;
+        %tmp.99 = invoke %tmp.97 %tmp.98();
+        %tmp.100 = 4;
+        %tmp.101 = div %tmp.99 %tmp.100;
+        %tmp.102 = sub %tmp.95 %tmp.101;
+        invoke %tmp.84 %tmp.85(%tmp.90, %tmp.102);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 68 4 ]
+        %tmp.104 = getv ? :View;
+        %tmp.105 = getv function %tmp.104 :onUpdate;
+        %tmp.107 = lgetv %dc;
+        invoke %tmp.104 %tmp.105(%tmp.107);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 70 4 ]
+        %tmp.108 = lgetv %dc;
+        %tmp.109 = getv function %tmp.108 :drawBitmap;
+        %tmp.110 = lgetv %dc;
+        %tmp.111 = getv function %tmp.110 :getWidth;
+        %tmp.112 = invoke %tmp.110 %tmp.111();
+        %tmp.113 = 4;
+        %tmp.114 = div %tmp.112 %tmp.113;
+        %tmp.115 = 1;
+        %tmp.116 = add %tmp.114 %tmp.115;
+        %tmp.117 = lgetv %dc;
+        %tmp.118 = getv function %tmp.117 :getHeight;
+        %tmp.119 = invoke %tmp.117 %tmp.118();
+        %tmp.120 = 4;
+        %tmp.121 = div %tmp.119 %tmp.120;
+        %tmp.123 = getv ? :myImage;
+        invoke %tmp.108 %tmp.109(%tmp.116, %tmp.121, %tmp.123);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 71 4 ]
+        %tmp.124 = lgetv %dc;
+        %tmp.125 = getv function %tmp.124 :setColor;
+        %tmp.126 = getm $.Toybox.Graphics;
+        %tmp.127 = getv %tmp.126 :COLOR_WHITE;
+        %tmp.128 = getm $.Toybox.Graphics;
+        %tmp.129 = getv %tmp.128 :COLOR_TRANSPARENT;
+        invoke %tmp.124 %tmp.125(%tmp.127, %tmp.129);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 76 8 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %batteryLabelView.9 = local;
+        %tmp.131 = getv ? :View;
+        %tmp.132 = getv function %tmp.131 :findDrawableById;
+        %tmp.133 = "batteryLabel";
+        %tmp.134 = invoke %tmp.131 %tmp.132(%tmp.133);
+        %tmp.135 = as %tmp.134 Text;
+        lputv %batteryLabelView.9 %tmp.135;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 77 8 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %battery.10 = local;
+        %tmp.136 = getm $.Toybox.System;
+        %tmp.137 = getv function %tmp.136 :getSystemStats;
+        %tmp.138 = invoke %tmp.136 %tmp.137();
+        %tmp.139 = getv %tmp.138 :battery;
+        lputv %battery.10 %tmp.139;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 78 8 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %batteryString.11 = local;
+        %tmp.140 = lgetv %battery.10;
+        %tmp.141 = getv function %tmp.140 :format;
+        %tmp.142 = "%.0f";
+        %tmp.143 = invoke %tmp.140 %tmp.141(%tmp.142);
+        lputv %batteryString.11 %tmp.143;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 79 8 ]
+        %tmp.144 = lgetv %batteryLabelView.9;
+        %tmp.145 = getv function %tmp.144 :setText;
+        %tmp.147 = lgetv %batteryString.11;
+        invoke %tmp.144 %tmp.145(%tmp.147);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 81 8 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop" ]
+        %heartLabelView.12 = local;
+        %tmp.149 = getv ? :View;
+        %tmp.150 = getv function %tmp.149 :findDrawableById;
+        %tmp.151 = "heartLabel";
+        %tmp.152 = invoke %tmp.149 %tmp.150(%tmp.151);
+        %tmp.153 = as %tmp.152 Text;
+        lputv %heartLabelView.12 %tmp.153;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 82 8 ]
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_82_8_if_stmt:
+        %tmp.155 = getv ? :Activity;
+        %tmp.156 = getv function %tmp.155 :getActivityInfo;
+        %tmp.157 = invoke %tmp.155 %tmp.156();
+        %tmp.158 = null;
+        %tmp.159 = ne %tmp.157 %tmp.158;
+        bf %tmp.159 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_82_8_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_82_8_if_true:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_82_48_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 83 10 ]
+        %tmp.161 = getv ? :Activity;
+        %tmp.162 = getv function %tmp.161 :getActivityInfo;
+        %tmp.163 = invoke %tmp.161 %tmp.162();
+        %tmp.164 = getv %tmp.163 :currentHeartRate;
+        %tmp.165 = "";
+        %tmp.166 = add %tmp.164 %tmp.165;
+        putv self :lastHR %tmp.166;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_82_48_stop:
+        goto @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_82_8_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_82_8_if_end:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 85 8 ]
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_8_if_stmt:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_12_begin:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_12_begin:
+        %tmp.168 = getv ? :lastHR;
+        %tmp.169 = null;
+        %tmp.170 = eq %tmp.168 %tmp.169;
+        %tmp.171 = dup %tmp.170;
+        bt %tmp.171 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_30_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_30_false:
+        %tmp.173 = getv ? :lastHR;
+        %tmp.174 = as %tmp.173 { (!Null) };
+        %tmp.175 = 0;
+        %tmp.176 = eq %tmp.174 %tmp.175;
+        %tmp.177 = or %tmp.170 %tmp.176;
+        push %tmp.177;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_30_end:
+        %tmp.178 = phi [%tmp.171 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_12_begin] [%tmp.177 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_30_false] [%tmp.178 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_30_end];
+        %tmp.179 = dup %tmp.178;
+        bt %tmp.179 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_45_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_45_false:
+        %tmp.181 = getv ? :lastHR;
+        %tmp.182 = as %tmp.181 { (!Null) };
+        %tmp.183 = getv function %tmp.182 :equals;
+        %tmp.184 = "null";
+        %tmp.185 = invoke %tmp.182 %tmp.183(%tmp.184);
+        %tmp.186 = or %tmp.178 %tmp.185;
+        push %tmp.186;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_45_end:
+        %tmp.187 = phi [%tmp.179 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_12_begin] [%tmp.186 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_45_false] [%tmp.187 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_45_end];
+        bf %tmp.187 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_8_if_false;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_8_if_true:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_68_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 86 11 ]
+        %tmp.188 = lgetv %heartLabelView.12;
+        %tmp.189 = getv function %tmp.188 :setText;
+        %tmp.190 = "";
+        invoke %tmp.188 %tmp.189(%tmp.190);
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_68_stop:
+        goto @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_8_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_8_if_false:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_88_15_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 89 12 ]
+        %tmp.191 = lgetv %heartLabelView.12;
+        %tmp.192 = getv function %tmp.191 :setText;
+        %tmp.194 = getv ? :lastHR;
+        invoke %tmp.191 %tmp.192(%tmp.194);
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_88_15_stop:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_85_8_if_end:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 92 4 ]
+        %tmp.195 = self;
+        %tmp.196 = getv function %tmp.195 :drawHand;
+        %tmp.198 = lgetv %dc;
+        %tmp.199 = 60;
+        %tmp.201 = lgetv %minutes.5;
+        %tmp.202 = 0.4;
+        %tmp.203 = lgetv %dc;
+        %tmp.204 = getv function %tmp.203 :getWidth;
+        %tmp.205 = invoke %tmp.203 %tmp.204();
+        %tmp.206 = mul %tmp.202 %tmp.205;
+        %tmp.207 = 3.5;
+        invoke %tmp.195 %tmp.196(%tmp.198, %tmp.199, %tmp.201, %tmp.206, %tmp.207);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 93 4 ]
+        %tmp.208 = self;
+        %tmp.209 = getv function %tmp.208 :drawHandOffset;
+        %tmp.211 = lgetv %dc;
+        %tmp.212 = 12.0;
+        %tmp.213 = 60.0;
+        %tmp.215 = lgetv %hours.3;
+        %tmp.217 = lgetv %minutes.5;
+        %tmp.218 = 0.3;
+        %tmp.219 = lgetv %dc;
+        %tmp.220 = getv function %tmp.219 :getWidth;
+        %tmp.221 = invoke %tmp.219 %tmp.220();
+        %tmp.222 = mul %tmp.218 %tmp.221;
+        %tmp.223 = 3.5;
+        invoke %tmp.208 %tmp.209(%tmp.211, %tmp.212, %tmp.213, %tmp.215, %tmp.217, %tmp.222, %tmp.223);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 94 4 ]
+        %tmp.224 = lgetv %dc;
+        %tmp.225 = getv function %tmp.224 :setColor;
+        %tmp.226 = getm $.Toybox.Graphics;
+        %tmp.227 = getv %tmp.226 :COLOR_BLACK;
+        %tmp.228 = getm $.Toybox.Graphics;
+        %tmp.229 = getv %tmp.228 :COLOR_TRANSPARENT;
+        invoke %tmp.224 %tmp.225(%tmp.227, %tmp.229);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 95 4 ]
+        %tmp.230 = lgetv %dc;
+        %tmp.231 = getv function %tmp.230 :fillCircle;
+        %tmp.232 = lgetv %dc;
+        %tmp.233 = getv function %tmp.232 :getWidth;
+        %tmp.234 = invoke %tmp.232 %tmp.233();
+        %tmp.235 = 2;
+        %tmp.236 = div %tmp.234 %tmp.235;
+        %tmp.237 = lgetv %dc;
+        %tmp.238 = getv function %tmp.237 :getHeight;
+        %tmp.239 = invoke %tmp.237 %tmp.238();
+        %tmp.240 = 2;
+        %tmp.241 = div %tmp.239 %tmp.240;
+        %tmp.242 = 3.5;
+        invoke %tmp.230 %tmp.231(%tmp.236, %tmp.241, %tmp.242);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 96 4 ]
+        %tmp.243 = lgetv %dc;
+        %tmp.244 = getv function %tmp.243 :setColor;
+        %tmp.245 = getm $.Toybox.Graphics;
+        %tmp.246 = getv %tmp.245 :COLOR_WHITE;
+        %tmp.247 = getm $.Toybox.Graphics;
+        %tmp.248 = getv %tmp.247 :COLOR_TRANSPARENT;
+        invoke %tmp.243 %tmp.244(%tmp.246, %tmp.248);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 97 4 ]
+        %tmp.249 = self;
+        %tmp.250 = getv function %tmp.249 :drawDate;
+        %tmp.252 = lgetv %dc;
+        %tmp.253 = 4;
+        %tmp.254 = lgetv %dc;
+        %tmp.255 = getv function %tmp.254 :getHeight;
+        %tmp.256 = invoke %tmp.254 %tmp.255();
+        %tmp.257 = 2;
+        %tmp.258 = div %tmp.256 %tmp.257;
+        invoke %tmp.249 %tmp.250(%tmp.252, %tmp.253, %tmp.258);
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_32_38_stop:
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 104; ]
+    function onHide() as Void {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 107; ]
+    function onExitSleep() as Void {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 110; ]
+    function onEnterSleep() as Void {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 112; ]
+    function drawHand(dc, num, time, length, stroke) {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 113 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_stop" ]
+        %angle.1 = local;
+        %tmp.2 = getv ? :Math;
+        %tmp.3 = getv function %tmp.2 :toRadians;
+        %tmp.4 = 360;
+        %tmp.6 = lgetv %num;
+        %tmp.7 = div %tmp.4 %tmp.6;
+        %tmp.9 = lgetv %time;
+        %tmp.10 = mul %tmp.7 %tmp.9;
+        %tmp.11 = invoke %tmp.2 %tmp.3(%tmp.10);
+        %tmp.13 = getv ? :Math;
+        %tmp.14 = getv %tmp.13 :PI;
+        %tmp.15 = 2;
+        %tmp.16 = div %tmp.14 %tmp.15;
+        %tmp.17 = sub %tmp.11 %tmp.16;
+        lputv %angle.1 %tmp.17;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 115 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_stop" ]
+        %center.2 = local;
+        %tmp.18 = lgetv %dc;
+        %tmp.19 = getv function %tmp.18 :getWidth;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        %tmp.21 = 2;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        lputv %center.2 %tmp.22;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 117 4 ]
+        %tmp.23 = lgetv %dc;
+        %tmp.24 = getv function %tmp.23 :setPenWidth;
+        %tmp.26 = lgetv %stroke;
+        invoke %tmp.23 %tmp.24(%tmp.26);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 119 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_stop" ]
+        %x.3 = local;
+        %tmp.28 = lgetv %center.2;
+        %tmp.30 = getv ? :Math;
+        %tmp.31 = getv function %tmp.30 :round;
+        %tmp.33 = getv ? :Math;
+        %tmp.34 = getv function %tmp.33 :cos;
+        %tmp.36 = lgetv %angle.1;
+        %tmp.37 = invoke %tmp.33 %tmp.34(%tmp.36);
+        %tmp.39 = lgetv %length;
+        %tmp.40 = mul %tmp.37 %tmp.39;
+        %tmp.41 = invoke %tmp.30 %tmp.31(%tmp.40);
+        %tmp.42 = add %tmp.28 %tmp.41;
+        lputv %x.3 %tmp.42;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 120 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_stop" ]
+        %y.4 = local;
+        %tmp.44 = lgetv %center.2;
+        %tmp.46 = getv ? :Math;
+        %tmp.47 = getv function %tmp.46 :round;
+        %tmp.49 = getv ? :Math;
+        %tmp.50 = getv function %tmp.49 :sin;
+        %tmp.52 = lgetv %angle.1;
+        %tmp.53 = invoke %tmp.49 %tmp.50(%tmp.52);
+        %tmp.55 = lgetv %length;
+        %tmp.56 = mul %tmp.53 %tmp.55;
+        %tmp.57 = invoke %tmp.46 %tmp.47(%tmp.56);
+        %tmp.58 = add %tmp.44 %tmp.57;
+        lputv %y.4 %tmp.58;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 122 4 ]
+        %tmp.59 = lgetv %dc;
+        %tmp.60 = getv function %tmp.59 :drawLine;
+        %tmp.62 = lgetv %center.2;
+        %tmp.64 = lgetv %center.2;
+        %tmp.66 = lgetv %x.3;
+        %tmp.68 = lgetv %y.4;
+        invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64, %tmp.66, %tmp.68);
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_112_51_stop:
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 128; ]
+    function drawHandOffset(dc, num, offsetNum, time, offsetTime, length, stroke) {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 137 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_stop" ]
+        %angle.1 = local;
+        %tmp.2 = getv ? :Math;
+        %tmp.3 = getv function %tmp.2 :toRadians;
+        %tmp.4 = 360;
+        %tmp.6 = lgetv %num;
+        %tmp.7 = div %tmp.4 %tmp.6;
+        %tmp.9 = lgetv %time;
+        %tmp.10 = mul %tmp.7 %tmp.9;
+        %tmp.11 = invoke %tmp.2 %tmp.3(%tmp.10);
+        %tmp.13 = getv ? :Math;
+        %tmp.14 = getv %tmp.13 :PI;
+        %tmp.15 = 2;
+        %tmp.16 = div %tmp.14 %tmp.15;
+        %tmp.17 = sub %tmp.11 %tmp.16;
+        lputv %angle.1 %tmp.17;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 138 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_stop" ]
+        %section.2 = local;
+        %tmp.18 = 360.0;
+        %tmp.20 = lgetv %num;
+        %tmp.21 = div %tmp.18 %tmp.20;
+        %tmp.23 = lgetv %offsetNum;
+        %tmp.24 = div %tmp.21 %tmp.23;
+        lputv %section.2 %tmp.24;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 140 4 ]
+        %tmp.25 = lgetv %angle.1;
+        %tmp.27 = getv ? :Math;
+        %tmp.28 = getv function %tmp.27 :toRadians;
+        %tmp.30 = lgetv %section.2;
+        %tmp.32 = lgetv %offsetTime;
+        %tmp.33 = mul %tmp.30 %tmp.32;
+        %tmp.34 = invoke %tmp.27 %tmp.28(%tmp.33);
+        %tmp.35 = add %tmp.25 %tmp.34;
+        lputv %angle.1 %tmp.35;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 142 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_stop" ]
+        %center.3 = local;
+        %tmp.36 = lgetv %dc;
+        %tmp.37 = getv function %tmp.36 :getWidth;
+        %tmp.38 = invoke %tmp.36 %tmp.37();
+        %tmp.39 = 2;
+        %tmp.40 = div %tmp.38 %tmp.39;
+        lputv %center.3 %tmp.40;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 144 4 ]
+        %tmp.41 = lgetv %dc;
+        %tmp.42 = getv function %tmp.41 :setPenWidth;
+        %tmp.44 = lgetv %stroke;
+        invoke %tmp.41 %tmp.42(%tmp.44);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 146 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_stop" ]
+        %x.4 = local;
+        %tmp.46 = lgetv %center.3;
+        %tmp.48 = getv ? :Math;
+        %tmp.49 = getv function %tmp.48 :round;
+        %tmp.51 = getv ? :Math;
+        %tmp.52 = getv function %tmp.51 :cos;
+        %tmp.54 = lgetv %angle.1;
+        %tmp.55 = invoke %tmp.51 %tmp.52(%tmp.54);
+        %tmp.57 = lgetv %length;
+        %tmp.58 = mul %tmp.55 %tmp.57;
+        %tmp.59 = invoke %tmp.48 %tmp.49(%tmp.58);
+        %tmp.60 = add %tmp.46 %tmp.59;
+        lputv %x.4 %tmp.60;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 147 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_stop" ]
+        %y.5 = local;
+        %tmp.62 = lgetv %center.3;
+        %tmp.64 = getv ? :Math;
+        %tmp.65 = getv function %tmp.64 :round;
+        %tmp.67 = getv ? :Math;
+        %tmp.68 = getv function %tmp.67 :sin;
+        %tmp.70 = lgetv %angle.1;
+        %tmp.71 = invoke %tmp.67 %tmp.68(%tmp.70);
+        %tmp.73 = lgetv %length;
+        %tmp.74 = mul %tmp.71 %tmp.73;
+        %tmp.75 = invoke %tmp.64 %tmp.65(%tmp.74);
+        %tmp.76 = add %tmp.62 %tmp.75;
+        lputv %y.5 %tmp.76;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 149 4 ]
+        %tmp.77 = lgetv %dc;
+        %tmp.78 = getv function %tmp.77 :drawLine;
+        %tmp.80 = lgetv %center.3;
+        %tmp.82 = lgetv %center.3;
+        %tmp.84 = lgetv %x.4;
+        %tmp.86 = lgetv %y.5;
+        invoke %tmp.77 %tmp.78(%tmp.80, %tmp.82, %tmp.84, %tmp.86);
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_136_4_stop:
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 152; ]
+    function drawDate(dc, x, y) {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_152_30_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 154 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_152_30_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_152_30_stop" ]
+        %now.1 = local;
+        %tmp.2 = getv ? :Time;
+        %tmp.3 = getv function %tmp.2 :now;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %now.1 %tmp.4;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 156 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_152_30_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_152_30_stop" ]
+        %date.2 = local;
+        %tmp.5 = getm $.Toybox.Time.Gregorian;
+        %tmp.6 = getv function %tmp.5 :info;
+        %tmp.8 = lgetv %now.1;
+        %tmp.10 = getv ? :Time;
+        %tmp.11 = getv %tmp.10 :FORMAT_MEDIUM;
+        %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.8, %tmp.11);
+        lputv %date.2 %tmp.12;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 158 4 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_152_30_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_152_30_stop" ]
+        %dateString.3 = local;
+        %tmp.13 = getm $.Toybox.Lang;
+        %tmp.14 = getv function %tmp.13 :format;
+        %tmp.15 = "$1$ $2$";
+        %tmp.16 = newa 2;
+        %tmp.17 = lgetv %date.2;
+        %tmp.18 = getv %tmp.17 :day_of_week;
+        %tmp.19 = dup %tmp.16;
+        %tmp.20 = aputv %tmp.19 0 %tmp.18;
+        %tmp.21 = lgetv %date.2;
+        %tmp.22 = getv %tmp.21 :day;
+        %tmp.23 = dup %tmp.20;
+        %tmp.24 = aputv %tmp.23 1 %tmp.22;
+        %tmp.25 = invoke %tmp.13 %tmp.14(%tmp.15, %tmp.24);
+        lputv %dateString.3 %tmp.25;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 160 4 ]
+        %tmp.26 = lgetv %dc;
+        %tmp.27 = getv function %tmp.26 :drawText;
+        %tmp.29 = lgetv %x;
+        %tmp.31 = lgetv %y;
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :FONT_SMALL;
+        %tmp.35 = lgetv %dateString.3;
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_LEFT;
+        %tmp.38 = getm $.Toybox.Graphics;
+        %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_VCENTER;
+        %tmp.40 = bitor %tmp.37 %tmp.39;
+        invoke %tmp.26 %tmp.27(%tmp.29, %tmp.31, %tmp.33, %tmp.35, %tmp.40);
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_152_30_stop:
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 169; ]
+    function drawTextBox(dc, text, x, y, width, height) {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_169_56_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 170 2 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setPenWidth;
+        %tmp.3 = 2;
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 172 2 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_169_56_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_169_56_stop" ]
+        %boxText.1 = local;
+        %tmp.6 = getm $.Toybox.WatchUi;
+        %tmp.7 = getv function ? %tmp.6 :Text;
+        %tmp.8 = newd 6;
+        %tmp.10 = const :text;
+        %tmp.12 = lgetv %text;
+        %tmp.13 = dup %tmp.8;
+        %tmp.14 = aputv %tmp.13 %tmp.10 %tmp.12;
+        %tmp.16 = const :color;
+        %tmp.17 = getm $.Toybox.Graphics;
+        %tmp.18 = getv %tmp.17 :COLOR_GREEN;
+        %tmp.19 = dup %tmp.14;
+        %tmp.20 = aputv %tmp.19 %tmp.16 %tmp.18;
+        %tmp.22 = const :font;
+        %tmp.23 = getm $.Toybox.Graphics;
+        %tmp.24 = getv %tmp.23 :FONT_SMALL;
+        %tmp.25 = dup %tmp.20;
+        %tmp.26 = aputv %tmp.25 %tmp.22 %tmp.24;
+        %tmp.28 = const :locX;
+        %tmp.30 = lgetv %x;
+        %tmp.31 = dup %tmp.26;
+        %tmp.32 = aputv %tmp.31 %tmp.28 %tmp.30;
+        %tmp.34 = const :locY;
+        %tmp.36 = lgetv %y;
+        %tmp.37 = dup %tmp.32;
+        %tmp.38 = aputv %tmp.37 %tmp.34 %tmp.36;
+        %tmp.40 = const :justification;
+        %tmp.41 = getm $.Toybox.Graphics;
+        %tmp.42 = getv %tmp.41 :TEXT_JUSTIFY_LEFT;
+        %tmp.43 = dup %tmp.38;
+        %tmp.44 = aputv %tmp.43 %tmp.40 %tmp.42;
+        %tmp.4 = newc %tmp.7 (%tmp.44);
+        lputv %boxText.1 %tmp.4;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" 181 2 ]
+        %tmp.45 = lgetv %boxText.1;
+        %tmp.46 = getv function %tmp.45 :draw;
+        %tmp.48 = lgetv %dc;
+        invoke %tmp.45 %tmp.46(%tmp.48);
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceView_mc_169_56_stop:
+    }
+}
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc"; @line = 1; ]
+<init> {
+}
