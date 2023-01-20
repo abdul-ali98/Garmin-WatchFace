@@ -1,10 +1,4 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="launcher_icon.png" />
-    <bitmap id="mcgill_logo" filename="splash-logo.svg" />
-    <bitmap id="weather_icon_snow" filename="weather_snow.svg" />
-    <bitmap id="weather_icon_normal" filename="weather_normal.svg" />
-    <bitmap id="weather_icon_worst" filename="weather_worst.svg" />
-    <bitmap id="steps_icon" filename="steps.svg" />
-    <bitmap id="battery_icon_charging" filename="battery_icon_charging.png" />
-    <bitmap id="battery_icon_not_charging" filename="battery_icon_not_charging.svg" />
+    <bitmap id="MyImage" filename="splash-logo.svg" />
 </drawables>
