@@ -7,4 +7,7 @@
     <bitmap id="steps_icon" filename="steps.svg" />
     <bitmap id="battery_icon_charging" filename="battery_icon_charging.png" />
     <bitmap id="battery_icon_not_charging" filename="battery_icon_not_charging.svg" />
+    <bitmap id="sunrise_icon" filename="sunrise.svg" />
+    <bitmap id="sunset_icon" filename="sunset.svg" />
+    <bitmap id="heart_icon" filename="heart.png" />
 </drawables>

@@ -1,0 +1,26 @@
+<layout id="WatchFace">
+    <drawable class="Background" />
+    <label id="batteryLabel" x="center" y="20" font="Graphics.FONT_XTINY" text="" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="TimeLabel" x="130" y="39" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_RED" />
+
+
+    <label id="weatherLabel1" x="30" y="60" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="weatherLabel2" x="50" y="83" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="dateLabel" x="7" y="120" font="Graphics.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    
+    <label id="sunriseLabel" x="30" y="160" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="heartLabel" x="130" y="200" font="Graphics.FONT_TINY" text="" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="sunsetLabel" x="190" y="160" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="sportDistanceLabel" x="180" y="120" font="Graphics.FONT_SMALL" text="" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="stepsLabel" x="165" y="63" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+
+
+    <bitmap id="logo" x="center" y="center" filename="../drawables/splash-logo.svg"/> 
+    <bitmap id="battery" x="100" y="12" filename="../../resources/drawables/battery_icon_not_charging.svg" />
+   <bitmap id="sunrise" x="46" y="175" filename="../../resources/drawables/sunrise.svg" />
+   <bitmap id="heart" x="85" y="185" filename="../../resources/drawables/heart.png" />
+   <bitmap id="sunset" x="180" y="180" filename="../../resources/drawables/sunset.svg" /> 
+   <bitmap id="steps" x="190" y="60" filename="../../resources/drawables/steps.svg" /> 
+    
+
+</layout>

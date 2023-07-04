@@ -1,0 +1,105 @@
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 5; ]
+class McGillFaceApp extends Application.AppBase{
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 7; ]
+    function initialize() as Void {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_7_26_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" 8 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_7_26_stop:
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 12; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 16; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 20; ]
+    function getInitialView() as Array<Views or InputDelegates> or Null {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_20_65_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" 21 8 ]
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_8_if_stmt:
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv %tmp.1 :WatchFace;
+        %tmp.4 = const :onPartialUpdate;
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_8_if_false;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_8_if_true:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_60_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" 22 13 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_60_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_60_stop" ]
+        %view.1 = local;
+        %tmp.9 = getm $;
+        %tmp.10 = getv %tmp.9 :McGillFaceView;
+        %tmp.6 = newc %tmp.10 ();
+        lputv %view.1 %tmp.6;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" 23 13 ]
+        [ "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_60_start" "_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_60_stop" ]
+        %delegate.2 = local;
+        %tmp.14 = getm $;
+        %tmp.15 = getv %tmp.14 :McGillDelegate;
+        %tmp.17 = lgetv %view.1;
+        %tmp.11 = newc %tmp.15 (%tmp.17);
+        lputv %delegate.2 %tmp.11;
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" 24 12 ]
+        %tmp.18 = newa Array<Views or InputDelegates> 2;
+        %tmp.20 = lgetv %view.1;
+        %tmp.21 = dup %tmp.18;
+        %tmp.22 = aputv %tmp.21 0 %tmp.20;
+        %tmp.24 = lgetv %delegate.2;
+        %tmp.25 = dup %tmp.22;
+        %tmp.26 = aputv %tmp.25 1 %tmp.24;
+        ret %tmp.26;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_60_stop:
+        goto @_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_8_if_end;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_8_if_false:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_26_13_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" 27 8 ]
+        %tmp.27 = newa Array<Views or InputDelegates> 1;
+        %tmp.31 = getv ? :McGillFaceView;
+        %tmp.28 = newc %tmp.31 ();
+        %tmp.32 = dup %tmp.27;
+        %tmp.33 = aputv %tmp.32 0 %tmp.28;
+        ret %tmp.33;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_26_13_stop:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_21_8_if_end:
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_20_65_stop:
+    }
+    [ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 32; ]
+    function onSettingsChanged() as Void {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_32_41_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" 33 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :requestUpdate;
+        invoke %tmp.1 %tmp.2();
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_32_41_stop:
+    }
+}
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 38; ]
+function getApp() as McGillFaceApp {
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_38_35_start:
+[ "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" 39 4 ]
+    %tmp.1 = getm $.Toybox.Application;
+    %tmp.2 = getv function %tmp.1 :getApp;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    %tmp.4 = as %tmp.3 McGillFaceApp;
+    ret %tmp.4;
+_Users_abdelrahmanali_Education_Garmin_McGillFace_source_McGillFaceApp_mc_38_35_stop:
+}
+[ @file = "/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc"; @line = 1; ]
+<init> {
+}
