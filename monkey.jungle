@@ -1,1 +1,4 @@
 project.manifest = manifest.xml
+
+round-260x260.resourcePath = $(base.resourcePath);resources-round-260x260
+round-240x240.resourcePath = $(base.resourcePath);resources-round-240x240

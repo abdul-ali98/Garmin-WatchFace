@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="1" lineNum="38" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="1" lineNum="39" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="2" lineNum="531" parent="globals/McGillDelegate" pc="268435486" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="3" lineNum="536" parent="globals/McGillDelegate" pc="268435505" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="3" lineNum="537" parent="globals/McGillDelegate" pc="268435507" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="3" lineNum="538" parent="globals/McGillDelegate" pc="268435525" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="4" lineNum="542" parent="globals/McGillDelegate" pc="268435536" symbol="onPowerBudgetExceeded"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="4" lineNum="543" parent="globals/McGillDelegate" pc="268435538" symbol="onPowerBudgetExceeded"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="4" lineNum="544" parent="globals/McGillDelegate" pc="268435568" symbol="onPowerBudgetExceeded"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceBackground.mc" id="5" lineNum="6" parent="globals/Background" pc="268435599" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceBackground.mc" id="6" lineNum="8" parent="globals/Background" pc="268435618" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceBackground.mc" id="6" lineNum="9" parent="globals/Background" pc="268435622" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceBackground.mc" id="6" lineNum="13" parent="globals/Background" pc="268435643" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceBackground.mc" id="7" lineNum="16" parent="globals/Background" pc="268435664" symbol="draw"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceBackground.mc" id="7" lineNum="18" parent="globals/Background" pc="268435666" symbol="draw"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceBackground.mc" id="7" lineNum="19" parent="globals/Background" pc="268435708" symbol="draw"/>
+        <entry filename="Rez.mc" id="8" lineNum="1" parent="globals/Rez" pc="268435721" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="9" lineNum="5" parent="globals/McGillFaceApp" pc="268435745" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="10" lineNum="12" parent="globals/McGillFaceApp" pc="268435764" symbol="onStart"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="11" lineNum="32" parent="globals/McGillFaceApp" pc="268435767" symbol="onSettingsChanged"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="11" lineNum="33" parent="globals/McGillFaceApp" pc="268435769" symbol="onSettingsChanged"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="12" lineNum="20" parent="globals/McGillFaceApp" pc="268435786" symbol="getInitialView"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="12" lineNum="21" parent="globals/McGillFaceApp" pc="268435790" symbol="getInitialView"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="12" lineNum="22" parent="globals/McGillFaceApp" pc="268435811" symbol="getInitialView"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="12" lineNum="23" parent="globals/McGillFaceApp" pc="268435839" symbol="getInitialView"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="12" lineNum="24" parent="globals/McGillFaceApp" pc="268435869" symbol="getInitialView"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="12" lineNum="27" parent="globals/McGillFaceApp" pc="268435899" symbol="getInitialView"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="13" lineNum="7" parent="globals/McGillFaceApp" pc="268435941" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="13" lineNum="8" parent="globals/McGillFaceApp" pc="268435943" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceApp.mc" id="14" lineNum="16" parent="globals/McGillFaceApp" pc="268435962" symbol="onStop"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="15" lineNum="16" parent="globals/McGillFaceView" pc="268435965" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="16" lineNum="420" parent="globals/McGillFaceView" pc="268435984" symbol="drawHandCut"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="16" lineNum="421" parent="globals/McGillFaceView" pc="268435988" symbol="drawHandCut"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="16" lineNum="423" parent="globals/McGillFaceView" pc="268436022" symbol="drawHandCut"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="16" lineNum="425" parent="globals/McGillFaceView" pc="268436041" symbol="drawHandCut"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="16" lineNum="427" parent="globals/McGillFaceView" pc="268436055" symbol="drawHandCut"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="16" lineNum="428" parent="globals/McGillFaceView" pc="268436119" symbol="drawHandCut"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="16" lineNum="429" parent="globals/McGillFaceView" pc="268436183" symbol="drawHandCut"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="16" lineNum="430" parent="globals/McGillFaceView" pc="268436223" symbol="drawHandCut"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="16" lineNum="432" parent="globals/McGillFaceView" pc="268436263" symbol="drawHandCut"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="440" parent="globals/McGillFaceView" pc="268436284" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="443" parent="globals/McGillFaceView" pc="268436288" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="444" parent="globals/McGillFaceView" pc="268436486" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="445" parent="globals/McGillFaceView" pc="268436494" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="446" parent="globals/McGillFaceView" pc="268436513" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="447" parent="globals/McGillFaceView" pc="268436532" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="448" parent="globals/McGillFaceView" pc="268436551" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="452" parent="globals/McGillFaceView" pc="268436570" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="454" parent="globals/McGillFaceView" pc="268436588" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="455" parent="globals/McGillFaceView" pc="268436613" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="456" parent="globals/McGillFaceView" pc="268436638" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="460" parent="globals/McGillFaceView" pc="268436685" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="17" lineNum="461" parent="globals/McGillFaceView" pc="268436699" symbol="drawHand2"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="319" parent="globals/McGillFaceView" pc="268436714" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="320" parent="globals/McGillFaceView" pc="268436718" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="321" parent="globals/McGillFaceView" pc="268436771" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="322" parent="globals/McGillFaceView" pc="268436793" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="324" parent="globals/McGillFaceView" pc="268436818" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="325" parent="globals/McGillFaceView" pc="268436828" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="326" parent="globals/McGillFaceView" pc="268436838" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="327" parent="globals/McGillFaceView" pc="268436858" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="329" parent="globals/McGillFaceView" pc="268436871" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="330" parent="globals/McGillFaceView" pc="268436891" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="333" parent="globals/McGillFaceView" pc="268436904" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="341" parent="globals/McGillFaceView" pc="268436938" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="342" parent="globals/McGillFaceView" pc="268436955" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="344" parent="globals/McGillFaceView" pc="268436987" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="352" parent="globals/McGillFaceView" pc="268437021" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="353" parent="globals/McGillFaceView" pc="268437041" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="355" parent="globals/McGillFaceView" pc="268437064" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="362" parent="globals/McGillFaceView" pc="268437249" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="364" parent="globals/McGillFaceView" pc="268437279" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="368" parent="globals/McGillFaceView" pc="268437282" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="370" parent="globals/McGillFaceView" pc="268437312" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="372" parent="globals/McGillFaceView" pc="268437315" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="374" parent="globals/McGillFaceView" pc="268437345" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="18" lineNum="377" parent="globals/McGillFaceView" pc="268437352" symbol="drawWeather"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="20" lineNum="387" parent="globals/McGillFaceView" pc="268437383" symbol="onExitSleep"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="20" lineNum="388" parent="globals/McGillFaceView" pc="268437385" symbol="onExitSleep"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="21" lineNum="463" parent="globals/McGillFaceView" pc="268437396" symbol="drawHand"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="21" lineNum="464" parent="globals/McGillFaceView" pc="268437400" symbol="drawHand"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="21" lineNum="465" parent="globals/McGillFaceView" pc="268437422" symbol="drawHand"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="21" lineNum="467" parent="globals/McGillFaceView" pc="268437456" symbol="drawHand"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="21" lineNum="469" parent="globals/McGillFaceView" pc="268437475" symbol="drawHand"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="21" lineNum="471" parent="globals/McGillFaceView" pc="268437489" symbol="drawHand"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="21" lineNum="472" parent="globals/McGillFaceView" pc="268437529" symbol="drawHand"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="21" lineNum="474" parent="globals/McGillFaceView" pc="268437569" symbol="drawHand"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="23" lineNum="514" parent="globals/McGillFaceView" pc="268437590" symbol="drawTextBox"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="23" lineNum="515" parent="globals/McGillFaceView" pc="268437594" symbol="drawTextBox"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="23" lineNum="517" parent="globals/McGillFaceView" pc="268437611" symbol="drawTextBox"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="23" lineNum="526" parent="globals/McGillFaceView" pc="268437714" symbol="drawTextBox"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="24" lineNum="109" parent="globals/McGillFaceView" pc="268437729" symbol="onLayout"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="24" lineNum="110" parent="globals/McGillFaceView" pc="268437731" symbol="onLayout"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="25" lineNum="120" parent="globals/McGillFaceView" pc="268437773" symbol="onPartialUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="25" lineNum="121" parent="globals/McGillFaceView" pc="268437777" symbol="onPartialUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="25" lineNum="122" parent="globals/McGillFaceView" pc="268437798" symbol="onPartialUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="25" lineNum="131" parent="globals/McGillFaceView" pc="268437821" symbol="onPartialUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="25" lineNum="132" parent="globals/McGillFaceView" pc="268437843" symbol="onPartialUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="398" parent="globals/McGillFaceView" pc="268438020" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="399" parent="globals/McGillFaceView" pc="268438024" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="400" parent="globals/McGillFaceView" pc="268438046" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="401" parent="globals/McGillFaceView" pc="268438063" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="402" parent="globals/McGillFaceView" pc="268438085" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="404" parent="globals/McGillFaceView" pc="268438104" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="405" parent="globals/McGillFaceView" pc="268438148" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="406" parent="globals/McGillFaceView" pc="268438192" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="407" parent="globals/McGillFaceView" pc="268438236" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="414" parent="globals/McGillFaceView" pc="268438280" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="415" parent="globals/McGillFaceView" pc="268438314" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="417" parent="globals/McGillFaceView" pc="268438348" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="26" lineNum="418" parent="globals/McGillFaceView" pc="268438382" symbol="drawLines"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="27" lineNum="393" parent="globals/McGillFaceView" pc="268438417" symbol="onEnterSleep"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="27" lineNum="394" parent="globals/McGillFaceView" pc="268438419" symbol="onEnterSleep"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="27" lineNum="395" parent="globals/McGillFaceView" pc="268438429" symbol="onEnterSleep"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="36" parent="globals/McGillFaceView" pc="268438451" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="37" parent="globals/McGillFaceView" pc="268438455" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="39" parent="globals/McGillFaceView" pc="268438473" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="40" parent="globals/McGillFaceView" pc="268438520" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="41" parent="globals/McGillFaceView" pc="268438567" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="42" parent="globals/McGillFaceView" pc="268438614" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="43" parent="globals/McGillFaceView" pc="268438661" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="44" parent="globals/McGillFaceView" pc="268438708" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="45" parent="globals/McGillFaceView" pc="268438755" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="46" parent="globals/McGillFaceView" pc="268438802" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="47" parent="globals/McGillFaceView" pc="268438849" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="48" parent="globals/McGillFaceView" pc="268438896" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="49" parent="globals/McGillFaceView" pc="268438909" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="50" parent="globals/McGillFaceView" pc="268438922" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="51" parent="globals/McGillFaceView" pc="268438929" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="52" parent="globals/McGillFaceView" pc="268438939" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="56" parent="globals/McGillFaceView" pc="268438949" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="57" parent="globals/McGillFaceView" pc="268438966" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="59" parent="globals/McGillFaceView" pc="268438973" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="60" parent="globals/McGillFaceView" pc="268438976" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="61" parent="globals/McGillFaceView" pc="268438983" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="64" parent="globals/McGillFaceView" pc="268438999" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="65" parent="globals/McGillFaceView" pc="268439051" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="66" parent="globals/McGillFaceView" pc="268439075" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="67" parent="globals/McGillFaceView" pc="268439085" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="68" parent="globals/McGillFaceView" pc="268439108" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="69" parent="globals/McGillFaceView" pc="268439141" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="70" parent="globals/McGillFaceView" pc="268439243" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="72" parent="globals/McGillFaceView" pc="268439250" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="73" parent="globals/McGillFaceView" pc="268439263" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="74" parent="globals/McGillFaceView" pc="268439295" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="75" parent="globals/McGillFaceView" pc="268439312" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="79" parent="globals/McGillFaceView" pc="268439334" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="81" parent="globals/McGillFaceView" pc="268439350" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="84" parent="globals/McGillFaceView" pc="268439372" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="85" parent="globals/McGillFaceView" pc="268439375" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="86" parent="globals/McGillFaceView" pc="268439378" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="87" parent="globals/McGillFaceView" pc="268439395" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="88" parent="globals/McGillFaceView" pc="268439422" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="89" parent="globals/McGillFaceView" pc="268439432" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="90" parent="globals/McGillFaceView" pc="268439466" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="92" parent="globals/McGillFaceView" pc="268439503" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="94" parent="globals/McGillFaceView" pc="268439524" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="95" parent="globals/McGillFaceView" pc="268439531" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="96" parent="globals/McGillFaceView" pc="268439596" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="97" parent="globals/McGillFaceView" pc="268439655" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="101" parent="globals/McGillFaceView" pc="268439679" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="102" parent="globals/McGillFaceView" pc="268439686" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="28" lineNum="103" parent="globals/McGillFaceView" pc="268439751" symbol="initialize"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="480" parent="globals/McGillFaceView" pc="268439808" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="481" parent="globals/McGillFaceView" pc="268439812" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="482" parent="globals/McGillFaceView" pc="268439834" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="483" parent="globals/McGillFaceView" pc="268439868" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="485" parent="globals/McGillFaceView" pc="268439881" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="487" parent="globals/McGillFaceView" pc="268439906" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="489" parent="globals/McGillFaceView" pc="268439925" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="491" parent="globals/McGillFaceView" pc="268439939" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="492" parent="globals/McGillFaceView" pc="268439979" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="29" lineNum="494" parent="globals/McGillFaceView" pc="268440019" symbol="drawHandOffset"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="137" parent="globals/McGillFaceView" pc="268440040" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="139" parent="globals/McGillFaceView" pc="268440044" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="140" parent="globals/McGillFaceView" pc="268440065" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="141" parent="globals/McGillFaceView" pc="268440072" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="142" parent="globals/McGillFaceView" pc="268440089" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="143" parent="globals/McGillFaceView" pc="268440099" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="144" parent="globals/McGillFaceView" pc="268440109" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="145" parent="globals/McGillFaceView" pc="268440134" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="146" parent="globals/McGillFaceView" pc="268440145" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="149" parent="globals/McGillFaceView" pc="268440161" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="151" parent="globals/McGillFaceView" pc="268440165" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="152" parent="globals/McGillFaceView" pc="268440176" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="154" parent="globals/McGillFaceView" pc="268440189" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="155" parent="globals/McGillFaceView" pc="268440222" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="156" parent="globals/McGillFaceView" pc="268440226" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="157" parent="globals/McGillFaceView" pc="268440237" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="159" parent="globals/McGillFaceView" pc="268440250" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="160" parent="globals/McGillFaceView" pc="268440296" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="162" parent="globals/McGillFaceView" pc="268440313" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="163" parent="globals/McGillFaceView" pc="268440341" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="164" parent="globals/McGillFaceView" pc="268440358" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="165" parent="globals/McGillFaceView" pc="268440372" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="170" parent="globals/McGillFaceView" pc="268440442" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="172" parent="globals/McGillFaceView" pc="268440466" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="174" parent="globals/McGillFaceView" pc="268440526" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="179" parent="globals/McGillFaceView" pc="268440548" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="180" parent="globals/McGillFaceView" pc="268440576" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="181" parent="globals/McGillFaceView" pc="268440593" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="182" parent="globals/McGillFaceView" pc="268440603" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="183" parent="globals/McGillFaceView" pc="268440627" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="185" parent="globals/McGillFaceView" pc="268440641" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="186" parent="globals/McGillFaceView" pc="268440652" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="188" parent="globals/McGillFaceView" pc="268440685" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="191" parent="globals/McGillFaceView" pc="268440715" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="192" parent="globals/McGillFaceView" pc="268440749" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="193" parent="globals/McGillFaceView" pc="268440771" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="195" parent="globals/McGillFaceView" pc="268440811" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="196" parent="globals/McGillFaceView" pc="268440872" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="198" parent="globals/McGillFaceView" pc="268440888" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="200" parent="globals/McGillFaceView" pc="268440914" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="201" parent="globals/McGillFaceView" pc="268440942" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="203" parent="globals/McGillFaceView" pc="268440968" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="204" parent="globals/McGillFaceView" pc="268440982" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="205" parent="globals/McGillFaceView" pc="268441004" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="206" parent="globals/McGillFaceView" pc="268441055" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="207" parent="globals/McGillFaceView" pc="268441077" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="208" parent="globals/McGillFaceView" pc="268441113" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="209" parent="globals/McGillFaceView" pc="268441135" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="210" parent="globals/McGillFaceView" pc="268441147" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="217" parent="globals/McGillFaceView" pc="268441271" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="219" parent="globals/McGillFaceView" pc="268441293" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="222" parent="globals/McGillFaceView" pc="268441310" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="223" parent="globals/McGillFaceView" pc="268441384" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="224" parent="globals/McGillFaceView" pc="268441413" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="227" parent="globals/McGillFaceView" pc="268441446" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="230" parent="globals/McGillFaceView" pc="268441473" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="231" parent="globals/McGillFaceView" pc="268441495" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="233" parent="globals/McGillFaceView" pc="268441517" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="236" parent="globals/McGillFaceView" pc="268441547" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="237" parent="globals/McGillFaceView" pc="268441564" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="238" parent="globals/McGillFaceView" pc="268441574" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="239" parent="globals/McGillFaceView" pc="268441584" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="240" parent="globals/McGillFaceView" pc="268441604" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="242" parent="globals/McGillFaceView" pc="268441617" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="243" parent="globals/McGillFaceView" pc="268441639" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="250" parent="globals/McGillFaceView" pc="268441673" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="254" parent="globals/McGillFaceView" pc="268441703" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="256" parent="globals/McGillFaceView" pc="268441746" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="257" parent="globals/McGillFaceView" pc="268441796" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="262" parent="globals/McGillFaceView" pc="268441818" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="263" parent="globals/McGillFaceView" pc="268441848" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="271" parent="globals/McGillFaceView" pc="268441888" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="272" parent="globals/McGillFaceView" pc="268441918" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="282" parent="globals/McGillFaceView" pc="268441958" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="283" parent="globals/McGillFaceView" pc="268441961" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="284" parent="globals/McGillFaceView" pc="268441964" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="285" parent="globals/McGillFaceView" pc="268441981" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="286" parent="globals/McGillFaceView" pc="268442008" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="287" parent="globals/McGillFaceView" pc="268442018" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="288" parent="globals/McGillFaceView" pc="268442052" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="290" parent="globals/McGillFaceView" pc="268442089" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="292" parent="globals/McGillFaceView" pc="268442110" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="293" parent="globals/McGillFaceView" pc="268442117" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="294" parent="globals/McGillFaceView" pc="268442182" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="296" parent="globals/McGillFaceView" pc="268442244" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="297" parent="globals/McGillFaceView" pc="268442251" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="30" lineNum="298" parent="globals/McGillFaceView" pc="268442316" symbol="onUpdate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="31" lineNum="497" parent="globals/McGillFaceView" pc="268442379" symbol="drawDate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="31" lineNum="499" parent="globals/McGillFaceView" pc="268442383" symbol="drawDate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="31" lineNum="501" parent="globals/McGillFaceView" pc="268442400" symbol="drawDate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="31" lineNum="503" parent="globals/McGillFaceView" pc="268442424" symbol="drawDate"/>
+        <entry filename="/Users/abdelrahmanali/Education/Garmin/McGillFace/source/McGillFaceView.mc" id="31" lineNum="505" parent="globals/McGillFaceView" pc="268442484" symbol="drawDate"/>
+        <entry filename="Rez.mc" id="32" lineNum="27" parent="globals/Rez/Layouts" pc="268442513" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="32" lineNum="29" parent="globals/Rez/Layouts" pc="268442525" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="32" lineNum="30" parent="globals/Rez/Layouts" pc="268442553" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="32" lineNum="31" parent="globals/Rez/Layouts" pc="268442665" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="32" lineNum="32" parent="globals/Rez/Layouts" pc="268442800" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="32" lineNum="33" parent="globals/Rez/Layouts" pc="268442912" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="32" lineNum="34" parent="globals/Rez/Layouts" pc="268443017" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="32" lineNum="36" parent="globals/Rez/Layouts" pc="268443129" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8389346" symbol="text"/>
+        <entry field="true" id="26" symbol="heartLabelView"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="17" method="true" symbol="drawDate"/>
+        <entry id="24" method="true" symbol="drawWeather"/>
+        <entry id="7" module="true" symbol="globals/Rez/Menus"/>
+        <entry field="true" id="48" symbol="weather_icon_worst"/>
+        <entry field="true" id="12" symbol="&lt;globals/McGillDelegate/&lt;&gt;_view&gt;"/>
+        <entry id="8389683" method="true" symbol="onSettingsChanged"/>
+        <entry id="8390098" method="true" symbol="onPowerBudgetExceeded"/>
+        <entry field="true" id="55" symbol="ColorRed"/>
+        <entry id="11" object="true" symbol="McGillFaceView"/>
+        <entry field="true" id="34" symbol="sunsetTime"/>
+        <entry field="true" id="37" symbol="&lt;globals/McGillFaceView/&lt;&gt;weather_icon_snow&gt;"/>
+        <entry field="true" id="46" symbol="weather_icon_normal"/>
+        <entry field="true" id="58" symbol="MilitaryFormatTitle"/>
+        <entry id="8388647" module="true" symbol="UserProfile"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="52" symbol="ColorBlue"/>
+        <entry field="true" id="49" symbol="AppName"/>
+        <entry id="8388633" module="true" symbol="ActivityMonitor"/>
+        <entry field="true" id="38" symbol="&lt;globals/McGillFaceView/&lt;&gt;weather_icon_worst&gt;"/>
+        <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry field="true" id="45" symbol="sunset_icon"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry field="true" id="44" symbol="sunrise_icon"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="9" object="true" symbol="McGillDelegate"/>
+        <entry field="true" id="8391668" symbol="lowTemperature"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8390097" method="true" symbol="onPartialUpdate"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="42" symbol="heart"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8391489" module="true" symbol="Weather"/>
+        <entry field="true" id="35" symbol="&lt;globals/McGillFaceView/&lt;&gt;sunset_icon&gt;"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="16" symbol="&lt;globals/McGillFaceView/&lt;&gt;battery_icon_not_charging&gt;"/>
+        <entry id="8389348" symbol="font"/>
+        <entry field="true" id="32" symbol="sunriseTime"/>
+        <entry id="14" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry field="true" id="53" symbol="ColorDarkGray"/>
+        <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="27" symbol="&lt;globals/McGillFaceView/&lt;&gt;isSleep&gt;"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="33" symbol="&lt;globals/McGillFaceView/&lt;&gt;sunrise_icon&gt;"/>
+        <entry field="true" id="25" symbol="&lt;globals/McGillFaceView/&lt;&gt;flip&gt;"/>
+        <entry field="true" id="56" symbol="ColorWhite"/>
+        <entry id="5" module="true" symbol="globals/Rez/JsonData"/>
+        <entry field="true" id="51" symbol="ColorBlack"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="31" symbol="steps_icon"/>
+        <entry field="true" id="47" symbol="weather_icon_snow"/>
+        <entry field="true" id="8391667" symbol="highTemperature"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="21" method="true" symbol="drawHandOffset"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="23" method="true" symbol="drawTextBox"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry id="18" method="true" symbol="drawHand"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry field="true" id="39" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8388643" module="true" symbol="Sensor"/>
+        <entry field="true" id="36" symbol="&lt;globals/McGillFaceView/&lt;&gt;weather_icon_normal&gt;"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry field="true" id="50" symbol="BackgroundColorTitle"/>
+        <entry id="22" method="true" symbol="drawLines"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry id="10" object="true" symbol="McGillFaceApp"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry field="true" id="54" symbol="ColorLightGray"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389347" symbol="color"/>
+        <entry field="true" id="57" symbol="ForegroundColorTitle"/>
+        <entry field="true" id="41" symbol="battery_icon_not_charging"/>
+        <entry field="true" id="40" symbol="battery_icon_charging"/>
+        <entry id="13" module="true" symbol="Layouts"/>
+        <entry id="19" method="true" symbol="drawHand2"/>
+        <entry field="true" id="28" symbol="&lt;globals/McGillFaceView/&lt;&gt;lastHR&gt;"/>
+        <entry id="20" method="true" symbol="drawHandCut"/>
+        <entry id="8388642" module="true" symbol="Position"/>
+        <entry field="true" id="15" symbol="&lt;globals/McGillFaceView/&lt;&gt;battery_icon_charging&gt;"/>
+        <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+        <entry field="true" id="29" symbol="&lt;globals/McGillFaceView/&lt;&gt;mcGillImage&gt;"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="30" symbol="sportDistance"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="43" symbol="mcgill_logo"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435535" name="view" stackId="1" startPc="268435505"/>
+        <entry arg="true" endPc="268435598" name="powerInfo" stackId="1" startPc="268435536"/>
+        <entry endPc="268435662" name="dictionary" stackId="1" startPc="268435622"/>
+        <entry arg="true" endPc="268435720" name="dc" stackId="1" startPc="268435664"/>
+        <entry endPc="268435895" name="view" stackId="1" startPc="268435811"/>
+        <entry endPc="268435895" name="delegate" stackId="2" startPc="268435811"/>
+        <entry arg="true" endPc="268436283" name="dc" stackId="1" startPc="268435984"/>
+        <entry arg="true" endPc="268436283" name="num" stackId="2" startPc="268435984"/>
+        <entry arg="true" endPc="268436283" name="time" stackId="3" startPc="268435984"/>
+        <entry arg="true" endPc="268436283" name="length" stackId="4" startPc="268435984"/>
+        <entry arg="true" endPc="268436283" name="stroke" stackId="5" startPc="268435984"/>
+        <entry endPc="268436282" name="angle" stackId="6" startPc="268435988"/>
+        <entry endPc="268436282" name="center" stackId="7" startPc="268435988"/>
+        <entry endPc="268436282" name="x1" stackId="8" startPc="268435988"/>
+        <entry endPc="268436282" name="y1" stackId="9" startPc="268435988"/>
+        <entry endPc="268436282" name="x2" stackId="10" startPc="268435988"/>
+        <entry endPc="268436282" name="y2" stackId="11" startPc="268435988"/>
+        <entry arg="true" endPc="268436713" name="dc" stackId="1" startPc="268436284"/>
+        <entry arg="true" endPc="268436713" name="angle" stackId="2" startPc="268436284"/>
+        <entry arg="true" endPc="268436713" name="length" stackId="3" startPc="268436284"/>
+        <entry arg="true" endPc="268436713" name="width" stackId="4" startPc="268436284"/>
+        <entry endPc="268436712" name="coords" stackId="5" startPc="268436288"/>
+        <entry endPc="268436712" name="result" stackId="6" startPc="268436288"/>
+        <entry endPc="268436712" name="centerX" stackId="7" startPc="268436288"/>
+        <entry endPc="268436712" name="centerY" stackId="8" startPc="268436288"/>
+        <entry endPc="268436712" name="cos" stackId="9" startPc="268436288"/>
+        <entry endPc="268436712" name="sin" stackId="10" startPc="268436288"/>
+        <entry endPc="268436684" name="i" stackId="11" startPc="268436588"/>
+        <entry endPc="268436671" name="x" stackId="12" startPc="268436588"/>
+        <entry endPc="268436671" name="y" stackId="13" startPc="268436588"/>
+        <entry arg="true" endPc="268437382" name="dc" stackId="1" startPc="268436714"/>
+        <entry arg="true" endPc="268437382" name="temperature" stackId="2" startPc="268436714"/>
+        <entry arg="true" endPc="268437382" name="feelLikeTemperature" stackId="3" startPc="268436714"/>
+        <entry endPc="268437381" name="temperatureString" stackId="4" startPc="268436718"/>
+        <entry endPc="268437381" name="feelLikeTemperatureString" stackId="5" startPc="268436718"/>
+        <entry endPc="268437348" name="condition" stackId="6" startPc="268437041"/>
+        <entry arg="true" endPc="268437589" name="dc" stackId="1" startPc="268437396"/>
+        <entry arg="true" endPc="268437589" name="num" stackId="2" startPc="268437396"/>
+        <entry arg="true" endPc="268437589" name="time" stackId="3" startPc="268437396"/>
+        <entry arg="true" endPc="268437589" name="length" stackId="4" startPc="268437396"/>
+        <entry arg="true" endPc="268437589" name="stroke" stackId="5" startPc="268437396"/>
+        <entry endPc="268437588" name="angle" stackId="6" startPc="268437400"/>
+        <entry endPc="268437588" name="center" stackId="7" startPc="268437400"/>
+        <entry endPc="268437588" name="x" stackId="8" startPc="268437400"/>
+        <entry endPc="268437588" name="y" stackId="9" startPc="268437400"/>
+        <entry arg="true" endPc="268437728" name="dc" stackId="1" startPc="268437590"/>
+        <entry arg="true" endPc="268437728" name="text" stackId="2" startPc="268437590"/>
+        <entry arg="true" endPc="268437728" name="x" stackId="3" startPc="268437590"/>
+        <entry arg="true" endPc="268437728" name="y" stackId="4" startPc="268437590"/>
+        <entry arg="true" endPc="268437728" name="width" stackId="5" startPc="268437590"/>
+        <entry arg="true" endPc="268437728" name="height" stackId="6" startPc="268437590"/>
+        <entry endPc="268437727" name="boxText" stackId="7" startPc="268437594"/>
+        <entry arg="true" endPc="268437772" name="dc" stackId="1" startPc="268437729"/>
+        <entry arg="true" endPc="268438019" name="dc" stackId="1" startPc="268437773"/>
+        <entry endPc="268438018" name="seconds" stackId="2" startPc="268437777"/>
+        <entry arg="true" endPc="268438416" name="dc" stackId="1" startPc="268438020"/>
+        <entry endPc="268438415" name="fontHeight" stackId="2" startPc="268438024"/>
+        <entry endPc="268438415" name="center" stackId="3" startPc="268438024"/>
+        <entry endPc="268439806" name="sunsetTime" stackId="1" startPc="268438455"/>
+        <entry endPc="268439806" name="userActivityIterator" stackId="2" startPc="268438455"/>
+        <entry endPc="268439806" name="distance" stackId="3" startPc="268438455"/>
+        <entry endPc="268439806" name="sample" stackId="4" startPc="268438455"/>
+        <entry endPc="268439806" name="todayTime" stackId="5" startPc="268438455"/>
+        <entry endPc="268439806" name="todayDate" stackId="6" startPc="268438455"/>
+        <entry endPc="268439806" name="dayOfWeek" stackId="7" startPc="268438455"/>
+        <entry endPc="268439806" name="userFirstDayOfWeek" stackId="8" startPc="268438455"/>
+        <entry endPc="268439806" name="oneDay" stackId="9" startPc="268438455"/>
+        <entry endPc="268439806" name="startOfWeek" stackId="10" startPc="268438455"/>
+        <entry endPc="268439806" name="sunrise_moment" stackId="11" startPc="268438455"/>
+        <entry endPc="268439806" name="sunset_moment" stackId="12" startPc="268438455"/>
+        <entry endPc="268439806" name="locationInfo" stackId="13" startPc="268438455"/>
+        <entry endPc="268439499" name="loc" stackId="14" startPc="268439422"/>
+        <entry endPc="268439675" name="sunrise_info" stackId="15" startPc="268439531"/>
+        <entry endPc="268439803" name="sunset_info" stackId="16" startPc="268439686"/>
+        <entry arg="true" endPc="268440039" name="dc" stackId="1" startPc="268439808"/>
+        <entry arg="true" endPc="268440039" name="num" stackId="2" startPc="268439808"/>
+        <entry arg="true" endPc="268440039" name="offsetNum" stackId="3" startPc="268439808"/>
+        <entry arg="true" endPc="268440039" name="time" stackId="4" startPc="268439808"/>
+        <entry arg="true" endPc="268440039" name="offsetTime" stackId="5" startPc="268439808"/>
+        <entry arg="true" endPc="268440039" name="length" stackId="6" startPc="268439808"/>
+        <entry arg="true" endPc="268440039" name="stroke" stackId="7" startPc="268439808"/>
+        <entry endPc="268440038" name="angle" stackId="8" startPc="268439812"/>
+        <entry endPc="268440038" name="section" stackId="9" startPc="268439812"/>
+        <entry endPc="268440038" name="center" stackId="10" startPc="268439812"/>
+        <entry endPc="268440038" name="x" stackId="11" startPc="268439812"/>
+        <entry endPc="268440038" name="y" stackId="12" startPc="268439812"/>
+        <entry arg="true" endPc="268442378" name="dc" stackId="1" startPc="268440040"/>
+        <entry endPc="268442377" name="timeFormat" stackId="2" startPc="268440044"/>
+        <entry endPc="268442377" name="clockTime" stackId="3" startPc="268440044"/>
+        <entry endPc="268442377" name="hours" stackId="4" startPc="268440044"/>
+        <entry endPc="268442377" name="seconds" stackId="5" startPc="268440044"/>
+        <entry endPc="268442377" name="hoursString" stackId="6" startPc="268440044"/>
+        <entry endPc="268442377" name="minutes" stackId="7" startPc="268440044"/>
+        <entry endPc="268442377" name="minutesString" stackId="8" startPc="268440044"/>
+        <entry endPc="268442377" name="timeString" stackId="9" startPc="268440044"/>
+        <entry endPc="268442377" name="view" stackId="10" startPc="268440044"/>
+        <entry endPc="268442377" name="batteryLabelView" stackId="11" startPc="268440044"/>
+        <entry endPc="268442377" name="systemStats" stackId="12" startPc="268440044"/>
+        <entry endPc="268442377" name="battery" stackId="13" startPc="268440044"/>
+        <entry endPc="268442377" name="batteryString" stackId="14" startPc="268440044"/>
+        <entry endPc="268442377" name="distanceLabelView" stackId="15" startPc="268440044"/>
+        <entry endPc="268442377" name="dailyForecast" stackId="16" startPc="268440044"/>
+        <entry endPc="268442377" name="info" stackId="17" startPc="268440044"/>
+        <entry endPc="268442377" name="steps" stackId="18" startPc="268440044"/>
+        <entry endPc="268442377" name="stepsString" stackId="19" startPc="268440044"/>
+        <entry endPc="268442377" name="sunrise_moment" stackId="20" startPc="268440044"/>
+        <entry endPc="268442377" name="sunset_moment" stackId="21" startPc="268440044"/>
+        <entry endPc="268442377" name="locationInfo" stackId="22" startPc="268440044"/>
+        <entry endPc="268442085" name="loc" stackId="23" startPc="268442008"/>
+        <entry endPc="268442240" name="sunrise_info" stackId="24" startPc="268442117"/>
+        <entry endPc="268442374" name="sunset_info" stackId="25" startPc="268442251"/>
+        <entry arg="true" endPc="268442512" name="dc" stackId="1" startPc="268442379"/>
+        <entry arg="true" endPc="268442512" name="x" stackId="2" startPc="268442379"/>
+        <entry arg="true" endPc="268442512" name="y" stackId="3" startPc="268442379"/>
+        <entry endPc="268442511" name="now" stackId="4" startPc="268442383"/>
+        <entry endPc="268442511" name="date" stackId="5" startPc="268442383"/>
+        <entry endPc="268442511" name="dateString" stackId="6" startPc="268442383"/>
+        <entry arg="true" endPc="268443195" name="dc" stackId="1" startPc="268442513"/>
+        <entry endPc="268443195" name="rez_cmp_local_custom_drawable_89459095113807645357" stackId="2" startPc="268442525"/>
+        <entry endPc="268443195" name="rez_cmp_local_text_batteryLabel" stackId="3" startPc="268442525"/>
+        <entry endPc="268443195" name="rez_cmp_local_text_TimeLabel" stackId="4" startPc="268442525"/>
+        <entry endPc="268443195" name="rez_cmp_local_text_heartLabel" stackId="5" startPc="268442525"/>
+        <entry endPc="268443195" name="rez_cmp_local_bitmap_heart" stackId="6" startPc="268442525"/>
+        <entry endPc="268443195" name="rez_cmp_local_text_distanceLabel" stackId="7" startPc="268442525"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MilitaryFormatTitle"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="battery_icon_charging"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="weather_icon_snow"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="sunrise_icon"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="weather_icon_worst"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorWhite"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ForegroundColorTitle"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="heart"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorLightGray"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlue"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorRed"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="weather_icon_normal"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="battery_icon_not_charging"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGray"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="sunset_icon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlack"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="mcgill_logo"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="steps_icon"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/McGillDelegate" offset="174" parentId="globals" symbolId="McGillDelegate" type="class"/>
+        <dataEntry label="globals/Background" offset="237" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry label="globals/Rez" offset="292" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/McGillFaceApp" offset="371" parentId="globals" symbolId="McGillFaceApp" type="class"/>
+        <dataEntry label="globals/McGillFaceView" offset="450" parentId="globals" symbolId="McGillFaceView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="761" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="880" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="919" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="950" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="981" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="1092" parentId="Rez" symbolId="JsonData" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435485" name="getApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="McGillDelegate" startPc="268435486">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435535" name="initialize" parent="McGillDelegate" startPc="268435505">
+            <param id="view"/>
+            <documentation><![CDATA[<div class="description"> Constructor<br/> <div class="param"> view The analog view</div><br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435598" name="onPowerBudgetExceeded" parent="McGillDelegate" startPc="268435536">
+            <param id="powerInfo"/>
+            <documentation><![CDATA[<div class="description"> <div class="param"> powerInfo Information about the power budget</div><br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435617" name="&lt;init&gt;" parent="Background" startPc="268435599">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435663" name="initialize" parent="Background" startPc="268435618">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435720" name="draw" parent="Background" startPc="268435664">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435744" name="&lt;init&gt;" parent="Rez" startPc="268435721">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435763" name="&lt;init&gt;" parent="McGillFaceApp" startPc="268435745">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435766" name="onStart" parent="McGillFaceApp" startPc="268435764">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435785" name="onSettingsChanged" parent="McGillFaceApp" startPc="268435767">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435940" name="getInitialView" parent="McGillFaceApp" startPc="268435786">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435961" name="initialize" parent="McGillFaceApp" startPc="268435941">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435964" name="onStop" parent="McGillFaceApp" startPc="268435962">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435983" name="&lt;init&gt;" parent="McGillFaceView" startPc="268435965">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436283" name="drawHandCut" parent="McGillFaceView" startPc="268435984">
+            <param id="dc"/>
+            <param id="num"/>
+            <param id="time"/>
+            <param id="length"/>
+            <param id="stroke"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436713" name="drawHand2" parent="McGillFaceView" startPc="268436284">
+            <param id="dc"/>
+            <param id="angle"/>
+            <param id="length"/>
+            <param id="width"/>
+            <documentation><![CDATA[<div class="description"> Draw the watch hand<br/> <div class="param"> dc Device Context to Draw</div><br/> <div class="param"> angle Angle to draw the watch hand</div><br/> <div class="param"> length Length of the watch hand</div><br/> <div class="param"> width Width of the watch hand</div><br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437382" name="drawWeather" parent="McGillFaceView" startPc="268436714">
+            <param id="dc"/>
+            <param id="temperature"/>
+            <param id="feelLikeTemperature"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="McGillFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437395" name="onExitSleep" parent="McGillFaceView" startPc="268437383">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437589" name="drawHand" parent="McGillFaceView" startPc="268437396">
+            <param id="dc"/>
+            <param id="num"/>
+            <param id="time"/>
+            <param id="length"/>
+            <param id="stroke"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="McGillFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437728" name="drawTextBox" parent="McGillFaceView" startPc="268437590">
+            <param id="dc"/>
+            <param id="text"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="width"/>
+            <param id="height"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437772" name="onLayout" parent="McGillFaceView" startPc="268437729">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438019" name="onPartialUpdate" parent="McGillFaceView" startPc="268437773">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438416" name="drawLines" parent="McGillFaceView" startPc="268438020">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438450" name="onEnterSleep" parent="McGillFaceView" startPc="268438417">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439807" name="initialize" parent="McGillFaceView" startPc="268438451">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440039" name="drawHandOffset" parent="McGillFaceView" startPc="268439808">
+            <param id="dc"/>
+            <param id="num"/>
+            <param id="offsetNum"/>
+            <param id="time"/>
+            <param id="offsetTime"/>
+            <param id="length"/>
+            <param id="stroke"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442378" name="onUpdate" parent="McGillFaceView" startPc="268440040">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442512" name="drawDate" parent="McGillFaceView" startPc="268442379">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443195" name="WatchFace" parent="Layouts" startPc="268442513">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
