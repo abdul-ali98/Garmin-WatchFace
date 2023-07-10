@@ -13,4 +13,11 @@
     <string id="ColorBlue">Blue</string>
     <string id="ColorRed">Red</string>
 
+
+ <string id="UseRunDistanceTitle">Include running in weekly distance?</string>
+
+ <string id="UseBikeDistanceTitle">Include cycling in weekly distance?</string>
+
+ <string id="UseSwimDistanceTitle">Include swimming in weekly distance?</string>
+
 </strings>

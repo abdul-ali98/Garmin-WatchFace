@@ -22,4 +22,15 @@
         <settingConfig type="boolean" />
     </setting>
 
+<setting propertyKey="@Properties.UseRunDistance" title="@Strings.UseRunDistanceTitle">
+        <settingConfig type="boolean" />
+    </setting>
+<setting propertyKey="@Properties.UseBikeDistance" title="@Strings.UseBikeDistanceTitle">
+        <settingConfig type="boolean" />
+    </setting>
+<setting propertyKey="@Properties.UseSwimDistance" title="@Strings.UseSwimDistanceTitle">
+        <settingConfig type="boolean" />
+    </setting>
+
+
 </settings>

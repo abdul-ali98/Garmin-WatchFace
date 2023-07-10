@@ -6,12 +6,12 @@
 
     <label id="weatherLabel1" x="30" y="60" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
     <label id="weatherLabel2" x="50" y="83" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
-    <label id="dateLabel" x="7" y="120" font="Graphics.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="dateLabel" x="8" y="120" font="Graphics.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
     
     <label id="sunriseLabel" x="30" y="160" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
     <label id="heartLabel" x="130" y="200" font="Graphics.FONT_TINY" text="" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
-    <label id="sunsetLabel" x="190" y="160" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
-    <label id="sportDistanceLabel" x="180" y="120" font="Graphics.FONT_SMALL" text="" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="sunsetLabel" x="175" y="160" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
+    <label id="sportDistanceLabel" x="165" y="120" font="Graphics.FONT_SMALL" text="" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
     <label id="stepsLabel" x="165" y="63" font="Graphics.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_WHITE" />
 
 

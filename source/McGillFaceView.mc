@@ -19,24 +19,25 @@ class McGillFaceView extends WatchUi.WatchFace {
   private var weather_icon_normal;
   private var weather_icon_worst;
   private var flip; // for the time label to show/hide the ":"
-  private var isSleep;
+  private var isSleep; // we update it so we do not draw the seconds arc in low mode
   var heartLabelView;
 
   var lowTemperature;
   var highTemperature;
   var sunriseTime;
   var sunsetTime;
-  var sportDistance;
+  var runningDistance = 0;
+  var cyclingDistance = 0;
+  var swimmingDistance = 0;
 
   public function initialize() {
-    // Least common multipler for 218, 240, 260, 360, 416, 454 is 463,188,960;
-
     WatchFace.initialize();
 
+    // We use mcGillImage to determine the time label position
     mcGillImage = Application.loadResource(Rez.Drawables.mcgill_logo);
     weather_icon_snow = Application.loadResource(
       Rez.Drawables.weather_icon_snow
-    ); 
+    );
     weather_icon_normal = Application.loadResource(
       Rez.Drawables.weather_icon_normal
     );
@@ -49,11 +50,11 @@ class McGillFaceView extends WatchUi.WatchFace {
     flip = false;
     isSleep = false;
 
-    getActivityDistance();
+    setSportsDistance();
     setSunTimes();
   }
 
-  // Load your resources here
+  // We load resources here
   function onLayout(dc as Dc) as Void {
     setLayout(Rez.Layouts.WatchFace(dc));
   }
@@ -63,9 +64,11 @@ class McGillFaceView extends WatchUi.WatchFace {
   // loading resources into memory.
   function onShow() as Void {}
 
+  /**
+   * Gets called in low battery mode every second
+   * However, it has to be fast and never exceeds 100ms in execution on average
+   */
   function onPartialUpdate(dc as Dc) as Void {
-    //   var seconds =  System.getClockTime().sec;
-
     if (Activity.getActivityInfo() != null) {
       lastHR = Activity.getActivityInfo().currentHeartRate + "";
     }
@@ -75,18 +78,17 @@ class McGillFaceView extends WatchUi.WatchFace {
     heartLabelView.setText(lastHR);
   }
 
+  /**
+   * Update time label every second, we support 24H and 12H systems based on user's perefrences
+   */
   function drawTime(dc) {
-    dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-    var timeFormat = "$1$:$2$";
     var clockTime = System.getClockTime();
     var hours = clockTime.hour;
-    var seconds = clockTime.sec;
-    if (!System.getDeviceSettings().is24Hour) {
-      if (hours > 12) {
-        hours = hours - 12;
-      }
+    if (!System.getDeviceSettings().is24Hour && hours > 12) {
+      hours = hours - 12;
     }
-    var hoursString = hours;
+
+    var hoursString = hours + "";
 
     if (hours < 10) {
       hoursString = "0" + hours;
@@ -107,23 +109,13 @@ class McGillFaceView extends WatchUi.WatchFace {
       dc.getWidth() / 2,
       dc.getHeight() / 4 - mcGillImage.getHeight() / 5
     );
-    var h = dc.getHeight() / 4 - mcGillImage.getHeight() / 5;
+    View.onUpdate(dc);
   }
 
-  function drawLogo(dc) {
- //    dc.drawBitmap(dc.getWidth() / 4 , dc.getHeight() / 4, mcGillImage);
-
-    System.print("Logo is called");
-    //This is a scaled Bitmap so we can adjust the logo to the screen size
- /*   dc.drawScaledBitmap(
-      dc.getWidth() / 4,
-      dc.getHeight() / 4,
-      dc.getWidth() / 2,
-      dc.getWidth() / 2,
-      mcGillImage
-    ); */
-  }
-
+  /**
+   * Update battery level every second.
+   * TODO Should we update it everytime the face gets initialized for optimization?
+   */
   function drawBattery(dc) {
     dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
     var batteryLabelView = View.findDrawableById("batteryLabel") as Text;
@@ -131,9 +123,10 @@ class McGillFaceView extends WatchUi.WatchFace {
     var battery = systemStats.battery;
     var batteryString = battery.format("%.0f") + "%";
     batteryLabelView.setText(batteryString);
-
   }
-
+  /**
+   * Update heart rate value and make sure the value is valid
+   */
   function drawHeartRate(dc) {
     dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
     heartLabelView = View.findDrawableById("heartLabel") as Text;
@@ -150,10 +143,12 @@ class McGillFaceView extends WatchUi.WatchFace {
     ) {
       lastHR = "...";
     }
-    var iconDimension = dc.getWidth() / 6.5;
-
     heartLabelView.setText(lastHR);
   }
+
+  /**
+   * This method draw an arc to represent the seconds. Gets updated iff watch is not in low mode
+   */
 
   function drawSecondsArc(dc) {
     var seconds = System.getClockTime().sec;
@@ -170,6 +165,10 @@ class McGillFaceView extends WatchUi.WatchFace {
     }
   }
 
+  /**
+   * Update the weather tempratures for the day (low, high)
+   * and updates the weather icon based on the current weather
+   */
   function drawWeather(dc) {
     dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
     var dailyForecast = Weather.getDailyForecast();
@@ -195,6 +194,10 @@ class McGillFaceView extends WatchUi.WatchFace {
     }
   }
 
+  /**
+   * Updates Sunrise and sunrise labels
+   * Assumes the data is available piror call
+   */
   function drawSunTimes(dc) {
     dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
@@ -204,36 +207,47 @@ class McGillFaceView extends WatchUi.WatchFace {
     label.setText(sunsetTime);
   }
 
-  // Update the view
+  // Update the view every second if not in low mode
   function onUpdate(dc as Dc) as Void {
     // Get the current time and format it correctly
     View.onUpdate(dc);
-    drawTime(dc); 
-
-    drawBattery(dc); 
+    drawTime(dc);
+    drawBattery(dc);
     drawHeartRate(dc);
-
-    var distanceLabelView = View.findDrawableById("sportDistanceLabel") as Text;
-    distanceLabelView.setText(sportDistance + " KM");
-
-    var timeFormat = "$1$:$2$";
-    var clockTime = System.getClockTime();
-    var hours = clockTime.hour;
-    var seconds = clockTime.sec;
-    var minutes = clockTime.min.format("%02d").toLong();
-    drawLines(dc); 
-
-    drawDate(dc); 
-    drawSecondsArc(dc); 
+    drawSportsDistance(dc);
+    drawLines(dc);
+    drawDate(dc);
+    drawSecondsArc(dc);
     drawWeather(dc);
     drawSteps(dc);
     drawSunTimes(dc);
 
     dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+    var clockTime = System.getClockTime();
+    var hours = clockTime.hour;
+    var minutes = clockTime.min.format("%02d").toLong();
+    
+    // Has to be at the end so they will be on top of all drawings
     drawHand(dc, 60, minutes, 0.4 * dc.getWidth(), 4.5);
-    // drawHand2(dc, 360/minutes, 4.5, 0.4 * dc.getWidth());
     drawHandOffset(dc, 12.0, 60.0, hours, minutes, 0.3 * dc.getWidth(), 4.5);
-    //  View.onUpdate(dc);
+  }
+
+  function drawSportsDistance(dc) {
+    var totalDistance = 0;
+    
+    if (Application.getApp().getProperty("UseRunDistance")) {
+      totalDistance += runningDistance;
+    }
+    if (Application.getApp().getProperty("UseBikeDistance")) {
+      totalDistance += cyclingDistance;
+    }
+    if (Application.getApp().getProperty("UseSwimDistance")) {
+      totalDistance += swimmingDistance;
+    }
+
+    var sportsDistance = "" + (totalDistance/1000);
+    var distanceLabelView = View.findDrawableById("sportDistanceLabel") as Text;
+    distanceLabelView.setText(sportsDistance + " KM");
   }
 
   function drawWeatherHelper(dc, lowTemp, highTemp) {
@@ -260,7 +274,7 @@ class McGillFaceView extends WatchUi.WatchFace {
     dc.drawLine(45, 78, 60, 68);
 
     var highTempLabelView = View.findDrawableById("weatherLabel2") as Text;
-    highTempLabelView.setText(lowTempeString);
+    highTempLabelView.setText(highTempString);
 
     var h = dc.getHeight() / 3.5f;
     if (Weather.getCurrentConditions() != null) {
@@ -303,6 +317,9 @@ class McGillFaceView extends WatchUi.WatchFace {
     isSleep = true;
   }
 
+  /**
+   * Makes the necessary calls to draw the lines that seprate each data field
+   */
   function drawLines(dc) {
     dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT); // Using white as foreground color
     dc.setPenWidth(1);
@@ -319,25 +336,41 @@ class McGillFaceView extends WatchUi.WatchFace {
       h1 = 75;
       h2 = 165;
     }
-    dc.drawLine(10, center + fontHeight / 2, h1, center + fontHeight / 2); // x2 was 85
+    dc.drawLine(10, center + fontHeight / 2, h1, center + fontHeight / 2); 
     dc.drawLine(10, center - fontHeight / 2, h1, center - fontHeight / 2);
-    dc.drawLine(h2, center + fontHeight / 2, dc.getWidth() -10, center + fontHeight / 2);
-    dc.drawLine(h2, center - fontHeight / 2, dc.getWidth() -10, center - fontHeight / 2);
+    dc.drawLine(
+      h2,
+      center + fontHeight / 2,
+      dc.getWidth() - 10,
+      center + fontHeight / 2
+    );
+    dc.drawLine(
+      h2,
+      center - fontHeight / 2,
+      dc.getWidth() - 10,
+      center - fontHeight / 2
+    );
 
-    /*  dc.drawLine(center - 45,center - 45, center - 45, center + 45);
+    /* For debugging 
+      dc.drawLine(center - 45,center - 45, center - 45, center + 45);
       dc.drawLine(center + 45,center - 45, center + 45, center + 45);
       dc.drawLine(center- 45,center - 45, center + 45, center - 45);
       dc.drawLine(center - 45,center + 45, center + 45, center + 45); */
 
     var length = dc.getWidth() / 3.5;
-    drawHandCut(dc, 60 /* constant = 60 */, 5 /* minutes */, length, 2);
-    drawHandCut(dc, 60 /* constant = 60 */, 55 /* minutes */, length, 2);
+    drawHandCut(dc, 60 /* constant = 60 */, 6 /* minutes */, length, 2);
+    drawHandCut(dc, 60 /* constant = 60 */, 54 /* minutes */, length, 2);
 
     drawHandCut(dc, 60 /* constant = 60*/, 25 /* minutes */, length, 2);
     drawHandCut(dc, 60 /*constant = 60 */, 35 /* minutes */, length, 2);
   }
 
+  /**
+   * Draw a hand that do not start from the center.
+   *
+   */
   function drawHandCut(dc, num /* 60 */, time /* minutes */, length, stroke) {
+    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
     var angle = Math.toRadians((360 / num) * time) - Math.PI / 2;
 
     var center = dc.getWidth() / 2;
@@ -352,41 +385,12 @@ class McGillFaceView extends WatchUi.WatchFace {
     dc.drawLine(x1, y1, x2, y2);
   }
 
-  //! Draw the watch hand
-  //! @param dc Device Context to Draw
-  //! @param angle Angle to draw the watch hand
-  //! @param length Length of the watch hand
-  //! @param width Width of the watch hand
-  function drawHand2(dc, angle, length, width) {
-    // Map out the coordinates of the watch hand
-    var coords = [
-      [-(width / 2), 0],
-      [-(width / 2), -length],
-      [width / 2, -length],
-      [width / 2, 0],
-    ];
-    var result = new [4];
-    var centerX = dc.getWidth() / 2;
-    var centerY = dc.getHeight() / 2;
-    var cos = Math.cos(angle);
-    var sin = Math.sin(angle);
-
-    //System.println("coord has:" + coords[0] + "  " + coords[1]);
-    // Transform the coordinates
-    for (var i = 0; i < 4; i += 1) {
-      var x = coords[0] * cos - coords[1] * sin;
-      var y = coords[0] * sin + coords[1] * cos;
-      result = [centerX + x, centerY + y];
-    }
-
-    // Draw the polygon
-    dc.fillPolygon(result);
-    dc.fillPolygon(result);
-  }
+  /**
+   * Draw watch hand, num should be 60 obviously
+   */
   function drawHand(dc, num /* 60 */, time /* minutes */, length, stroke) {
     dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
     var angle = Math.toRadians((360 / num) * time) - Math.PI / 2;
-
     var center = dc.getWidth() / 2;
 
     dc.setPenWidth(stroke);
@@ -399,7 +403,7 @@ class McGillFaceView extends WatchUi.WatchFace {
 
   /**
       For Hours, i.e if the time is 9:30, we need the hour hand to be in between 9 and 10
-      */
+    */
   function drawHandOffset(
     dc,
     num,
@@ -419,12 +423,16 @@ class McGillFaceView extends WatchUi.WatchFace {
 
     dc.setPenWidth(stroke);
 
+    // Math.round() returns +ve or -ve
     var x = center + Math.round(Math.cos(angle) * length);
     var y = center + Math.round(Math.sin(angle) * length);
 
     dc.drawLine(center, center, x, y);
   }
 
+  /**
+   * We update the value of the Date label
+   */
   function drawDate(dc) {
     dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
     // Get the current time
@@ -436,40 +444,44 @@ class McGillFaceView extends WatchUi.WatchFace {
 
     var label = View.findDrawableById("dateLabel") as Text;
     label.setText(dateString);
-    System.println(
-      "Date label has width: " + View.findDrawableById("dateLabel").width
-    );
   }
 
-  function drawTextBox(dc, text, x, y, width, height) {
-    dc.setPenWidth(2);
-
-    var boxText = new WatchUi.Text({
-      :text => text,
-      :color => Graphics.COLOR_GREEN,
-      :font => Graphics.FONT_SMALL,
-      :locX => x,
-      :locY => y,
-      :justification => Graphics.TEXT_JUSTIFY_LEFT,
-    });
-
-    boxText.draw(dc);
-  }
-
-  function getActivityDistance() {
-    var distance = getRunningDistance();
-    sportDistance = "" + distance / 1000;
-  }
-
-  function getRunningDistance() as Number {
+  /**
+   * We compute the distance of running, cycling and swimming of the user,
+   * then, we show the total distance of their prefered sports according
+   * to their settings
+   */
+  function setSportsDistance() {
     var userActivityIterator = UserProfile.getUserActivityHistory();
-    var distance = 0;
+    runningDistance = 0;
+    cyclingDistance = 0;
+    swimmingDistance = 0;
 
     var sample = null;
     if (userActivityIterator != null) {
       sample = userActivityIterator.next();
     }
 
+    var startOfWeek = getTimeStampForStartOfWeek();
+
+    while (sample != null) {
+      if (sample.distance != null && sample.startTime.value() > startOfWeek) {
+        if (sample.type == Activity.SPORT_RUNNING) {
+          runningDistance += sample.distance;
+        } else if (sample.type == Activity.SPORT_CYCLING) {
+          cyclingDistance += sample.distance;
+        } else if (sample.type == Activity.SPORT_SWIMMING) {
+          swimmingDistance += sample.distance;
+        }
+      }
+      sample = userActivityIterator.next();
+    }
+  }
+
+  /**
+   * This is purposely not documented
+   */
+  function getTimeStampForStartOfWeek() {
     var todayTime = new Time.Moment(Time.today().value());
     var todayDate = Date.info(todayTime, Time.FORMAT_SHORT);
     var dayOfWeek = todayDate.day_of_week;
@@ -499,18 +511,11 @@ class McGillFaceView extends WatchUi.WatchFace {
       );
     }
     System.println(startOfWeek.value());
-    while (sample != null) {
-      if (sample.distance != null) {
-        if (sample.startTime.value() > startOfWeek.value()) {
-          if (sample.type == Activity.SPORT_RUNNING) {
-            distance += sample.distance;
-          }
-        }
-      }
-      sample = userActivityIterator.next();
-    }
-    return distance;
+    return startOfWeek.value();
   }
+  /**
+   * We update the value of the steps label
+   */
   function drawSteps(dc) {
     var info = ActivityMonitor.getInfo();
     var steps = info.steps;
@@ -520,17 +525,21 @@ class McGillFaceView extends WatchUi.WatchFace {
     }
     dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT); // Using white as foreground color
 
-    var x = (dc.getWidth() * 3) / 4 - 15;
-
     var label = View.findDrawableById("stepsLabel") as Text;
     label.setText(stepsString);
-
-    //   dc.drawBitmap(210, 70, steps_icon);
   }
+
+  /**
+   * we get sunrise and sunrise times which is available iff location info is available too.
+   * Then we store the sun times in storage so it will be available and valid for few days
+   * TODO check if the sun times have expired in 7 days.
+   */
   function setSunTimes() {
     var sunrise_moment = null;
     var sunset_moment = null;
     var locationInfo = Position.getInfo();
+
+    // Location is necessary to get sunrise and sunset times
     if (
       locationInfo != null &&
       locationInfo.accuracy != Position.QUALITY_NOT_AVAILABLE
@@ -550,10 +559,11 @@ class McGillFaceView extends WatchUi.WatchFace {
       }
       sunriseTime =
         hours.format("%02d") + ":" + sunrise_info.min.format("%02d");
+
+      // We store the sunTimes since it will be valid for few days before it needs to be updated.
       Application.Storage.setValue("sunrise", sunriseTime);
     } else if (Application.Storage.getValue("sunrise") != null) {
       sunriseTime = Application.Storage.getValue("sunrise");
-      System.println("frommmmm time isdddd:");
     }
     if (sunset_moment != null) {
       var sunset_info = Time.Gregorian.info(
@@ -565,11 +575,9 @@ class McGillFaceView extends WatchUi.WatchFace {
         hours = hours % 12;
       }
       sunsetTime = hours.format("%02d") + ":" + sunset_info.min.format("%02d");
-      System.println("sun set time is:" + sunsetTime);
       Storage.setValue("sunset", sunsetTime);
     } else if (Application.Storage.getValue("sunset") != null) {
       sunsetTime = Application.Storage.getValue("sunset");
-      System.println("frommmmm time is:");
     }
   }
 }
@@ -584,6 +592,9 @@ class McGillDelegate extends WatchUi.WatchFaceDelegate {
     _view = view;
   }
 
+  /**
+   * Gets called if we exceed power budget in onPartialUpdates()
+   */
   //! @param powerInfo Information about the power budget
   public function onPowerBudgetExceeded(
     powerInfo as WatchFacePowerInfo

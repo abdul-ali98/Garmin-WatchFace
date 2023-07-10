@@ -1,0 +1,93 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var mcgill_logo as Symbol;
+        (:initialized) var weather_icon_snow as Symbol;
+        (:initialized) var weather_icon_normal as Symbol;
+        (:initialized) var weather_icon_worst as Symbol;
+        (:initialized) var steps_icon as Symbol;
+        (:initialized) var battery_icon_charging as Symbol;
+        (:initialized) var battery_icon_not_charging as Symbol;
+        (:initialized) var sunrise_icon as Symbol;
+        (:initialized) var sunset_icon as Symbol;
+        (:initialized) var heart_icon as Symbol;
+        (:initialized) var logo as Symbol;
+        (:initialized) var battery as Symbol;
+        (:initialized) var sunrise as Symbol;
+        (:initialized) var heart as Symbol;
+        (:initialized) var sunset as Symbol;
+        (:initialized) var steps as Symbol;
+        (:initialized) var LauncherIcon as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_custom_drawable_15407419519914445434 = new Background();
+
+            var rez_cmp_local_text_batteryLabel = new WatchUi.Text({:identifier=>"batteryLabel", :color=>Graphics.COLOR_WHITE, :locX=>(240 * 0.5), :locY=>20, :justification=>Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :color=>Graphics.COLOR_RED, :locX=>130, :locY=>39, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
+
+            var rez_cmp_local_text_weatherLabel1 = new WatchUi.Text({:identifier=>"weatherLabel1", :color=>Graphics.COLOR_WHITE, :locX=>30, :locY=>60, :justification=>Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_weatherLabel2 = new WatchUi.Text({:identifier=>"weatherLabel2", :color=>Graphics.COLOR_WHITE, :locX=>50, :locY=>83, :justification=>Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_dateLabel = new WatchUi.Text({:identifier=>"dateLabel", :color=>Graphics.COLOR_WHITE, :locX=>7, :locY=>120, :justification=>Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_SMALL});
+
+            var rez_cmp_local_text_sunriseLabel = new WatchUi.Text({:identifier=>"sunriseLabel", :color=>Graphics.COLOR_WHITE, :locX=>30, :locY=>160, :justification=>Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_heartLabel = new WatchUi.Text({:identifier=>"heartLabel", :color=>Graphics.COLOR_WHITE, :locX=>130, :locY=>200, :justification=>Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_TINY});
+
+            var rez_cmp_local_text_sunsetLabel = new WatchUi.Text({:identifier=>"sunsetLabel", :color=>Graphics.COLOR_WHITE, :locX=>190, :locY=>160, :justification=>Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_text_sportDistanceLabel = new WatchUi.Text({:identifier=>"sportDistanceLabel", :color=>Graphics.COLOR_WHITE, :locX=>180, :locY=>120, :justification=>Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_SMALL});
+
+            var rez_cmp_local_text_stepsLabel = new WatchUi.Text({:identifier=>"stepsLabel", :color=>Graphics.COLOR_WHITE, :locX=>165, :locY=>63, :justification=>Gfx.TEXT_JUSTIFY_VCENTER|Gfx.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_XTINY});
+
+            var rez_cmp_local_bitmap_logo = new WatchUi.Bitmap({:identifier=>"logo", :rezId=>$.Rez.Drawables.logo, :locX=>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
+            rez_cmp_local_bitmap_logo.setLocation(((240 - rez_cmp_local_bitmap_logo.width) * 0.5), ((240 - rez_cmp_local_bitmap_logo.height) * 0.5));
+
+            var rez_cmp_local_bitmap_battery = new WatchUi.Bitmap({:identifier=>"battery", :rezId=>$.Rez.Drawables.battery, :locX=>100, :locY=>12});
+
+            var rez_cmp_local_bitmap_sunrise = new WatchUi.Bitmap({:identifier=>"sunrise", :rezId=>$.Rez.Drawables.sunrise, :locX=>46, :locY=>175});
+
+            var rez_cmp_local_bitmap_heart = new WatchUi.Bitmap({:identifier=>"heart", :rezId=>$.Rez.Drawables.heart, :locX=>85, :locY=>185});
+
+            var rez_cmp_local_bitmap_sunset = new WatchUi.Bitmap({:identifier=>"sunset", :rezId=>$.Rez.Drawables.sunset, :locX=>180, :locY=>180});
+
+            var rez_cmp_local_bitmap_steps = new WatchUi.Bitmap({:identifier=>"steps", :rezId=>$.Rez.Drawables.steps, :locX=>190, :locY=>60});
+
+            return [rez_cmp_local_custom_drawable_15407419519914445434, rez_cmp_local_text_batteryLabel, rez_cmp_local_text_TimeLabel, rez_cmp_local_text_weatherLabel1, rez_cmp_local_text_weatherLabel2, rez_cmp_local_text_dateLabel, rez_cmp_local_text_sunriseLabel, rez_cmp_local_text_heartLabel, rez_cmp_local_text_sunsetLabel, rez_cmp_local_text_sportDistanceLabel, rez_cmp_local_text_stepsLabel, rez_cmp_local_bitmap_logo, rez_cmp_local_bitmap_battery, rez_cmp_local_bitmap_sunrise, rez_cmp_local_bitmap_heart, rez_cmp_local_bitmap_sunset, rez_cmp_local_bitmap_steps] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Menus {
+    } // Menus
+
+    module Strings {
+        (:initialized) var ColorLightGray as Symbol;
+        (:initialized) var ColorBlue as Symbol;
+        (:initialized) var UseBikeDistanceTitle as Symbol;
+        (:initialized) var UseRunDistanceTitle as Symbol;
+        (:initialized) var BackgroundColorTitle as Symbol;
+        (:initialized) var ColorDarkGray as Symbol;
+        (:initialized) var MilitaryFormatTitle as Symbol;
+        (:initialized) var UseSwimDistanceTitle as Symbol;
+        (:initialized) var ColorBlack as Symbol;
+        (:initialized) var AppName as Symbol;
+        (:initialized) var ColorRed as Symbol;
+        (:initialized) var ForegroundColorTitle as Symbol;
+        (:initialized) var ColorWhite as Symbol;
+    } // Strings
+} // Rez
