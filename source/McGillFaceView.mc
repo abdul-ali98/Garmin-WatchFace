@@ -252,7 +252,7 @@ class McGillFaceView extends WatchUi.WatchFace {
 
   function drawWeatherHelper(dc, lowTemp, highTemp) {
     if (
-      !lowTemperature.equals("--") &&
+      !lowTemp.equals("--") &&
       System.getDeviceSettings().temperatureUnits == System.UNIT_STATUTE
     ) {
       lowTemp = (lowTemp * 9) / 5 + 32;
@@ -557,8 +557,7 @@ class McGillFaceView extends WatchUi.WatchFace {
       if (!System.getDeviceSettings().is24Hour) {
         hours = hours % 12;
       }
-      sunriseTime =
-        hours.format("%02d") + ":" + sunrise_info.min.format("%02d");
+      sunriseTime = hours.format("%02d") + ":" + sunrise_info.min.format("%02d");
 
       // We store the sunTimes since it will be valid for few days before it needs to be updated.
       Application.Storage.setValue("sunrise", sunriseTime);
