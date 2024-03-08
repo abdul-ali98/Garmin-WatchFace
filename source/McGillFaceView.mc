@@ -256,8 +256,10 @@ class McGillFaceView extends WatchUi.WatchFace {
       System.getDeviceSettings().temperatureUnits == System.UNIT_STATUTE
     ) {
       lowTemp = (lowTemp * 9) / 5 + 32;
+      lowTemp = lowTemp.format("%02d");
       highTemp = (highTemp * 9) / 5 + 32;
     }
+    
     var lowTempeString = lowTemp + "\u00B0";
     var highTempString = highTemp + "\u00B0";
     while (highTempString.length() < 3) {
@@ -488,13 +490,13 @@ class McGillFaceView extends WatchUi.WatchFace {
     var userFirstDayOfWeek = System.getDeviceSettings().firstDayOfWeek;
     var oneDay = new Time.Duration(24 * 60 * 60);
     var startOfWeek = 0;
-    System.println(
+   /* System.println(
       "user: " +
         userFirstDayOfWeek +
         "; 7 - user - dayOfweek: " +
         (7 - userFirstDayOfWeek - dayOfWeek)
     );
-    System.println("dayOfWeek: " + dayOfWeek);
+    System.println("dayOfWeek: " + dayOfWeek); */
     if (userFirstDayOfWeek > dayOfWeek) {
       startOfWeek = new Time.Moment(
         todayTime.value() -
